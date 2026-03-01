@@ -22,5 +22,5 @@ you can use something else called using like
 
 using std::stirng = str
 unisg std::vector<std::pair<std::string, int>> = pairlist_t
-........
+..............
 */
