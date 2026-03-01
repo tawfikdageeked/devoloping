@@ -20,6 +20,6 @@ int main(){
 
     }
 
-    // i have nothing to explain it very self explainotory
+    // i have nothing to explain it is very self explainotory
 
 }
