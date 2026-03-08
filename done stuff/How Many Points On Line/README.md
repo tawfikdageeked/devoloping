@@ -17,7 +17,7 @@ Given a set of 2D points, the algorithm:
 4. **Validates** every point against every line to count matches
 5. **Returns** the winning line equation and how many points lie on it
 
-```
+
 Input:  [0.0,0.0],[1.0,1.0],[2.0,2.0],[3.0,3.0],[1.0,0.0],[2.0,3.0]
 
 Output: Your Winner Line Equation Is y = 1x + (0)
@@ -49,7 +49,7 @@ raw string → points → all possible lines → count points → winner
 
 The parser walks through the input string character by character, extracting numbers by detecting digits, decimal points, and negative signs. It ignores brackets and splits on commas.
 
-```
+
 "[3.0,6.0],[7.0,5.0],[-1.6,7.4],"
   ↓
 [{3.0, 6.0}, {7.0, 5.0}, {-1.6, 7.4}]
@@ -59,7 +59,7 @@ The parser walks through the input string character by character, extracting num
 
 For every unique pair of points, the algorithm calculates the line equation `y = mx + c` where:
 
-```
+
 m = (y2 - y1) / (x2 - x1)    (slope)
 c = y1 - m * x1               (y-intercept)
 ```
@@ -83,7 +83,7 @@ Every point is tested against every unique line using the line equation. A point
 
 |y - (mx + c)| < epsilon       (for normal/horizontal lines)
 |x - c| < epsilon              (for vertical lines)
-```
+
 
 ### Step 5 — Result
 
