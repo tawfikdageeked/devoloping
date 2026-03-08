@@ -32,11 +32,6 @@ But instead of just returning a count like LeetCode expects, this program:
 
 ## How It Works
 
-### Architecture
-
-input() → FromStoP() → eqofline_generator() → validator() → output
-  ↓           ↓              ↓                      ↓           ↓
-raw string → points → all possible lines → count points → winner
 
 ### Step 1 — Input & Parsing
 
