@@ -80,7 +80,7 @@ Before adding a new line, the duplicate checker compares it against all existing
 
 Every point is tested against every unique line using the line equation. A point is considered "on the line" if:
 
-```
+
 |y - (mx + c)| < epsilon       (for normal/horizontal lines)
 |x - c| < epsilon              (for vertical lines)
 ```
@@ -101,12 +101,13 @@ The line with the highest point count wins.
 | Duplicate lines | Checked before adding to line collection |
 | Invalid input format | Input validator rejects and re-prompts |
 
-## Usage
+### Usage
 
 ### Compile
 
 ```bash
 g++ how_many_p_on_l.cpp -o how_many_p_on_l
+
 ```
 
 ### Run
@@ -176,4 +177,3 @@ The algorithm uses a brute force approach with O(n³) time complexity:
 ## License
 
 Do whatever you want with it. I'm learning.
-```
