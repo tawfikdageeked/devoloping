@@ -1,6 +1,3 @@
-
-
-```markdown
 # Max Points on a Line — Algorithm Tool
 
 A command-line tool that finds the line passing through the maximum number of points from a given set of 2D coordinates.
@@ -17,12 +14,10 @@ Given a set of 2D points, the algorithm:
 4. **Validates** every point against every line to count matches
 5. **Returns** the winning line equation and how many points lie on it
 
-
 Input:  [0.0,0.0],[1.0,1.0],[2.0,2.0],[3.0,3.0],[1.0,0.0],[2.0,3.0]
 
 Output: Your Winner Line Equation Is y = 1x + (0)
         And The Number Of Points That Fit On It = 4
-```
 
 ## The Problem
 
@@ -32,58 +27,48 @@ But instead of just returning a count like LeetCode expects, this program:
 
 - Takes real user input (not hardcoded test cases)
 - Validates input format
-- Returns the actual line equation (`y = mx + c` or `x = c`)
+- Returns the actual line equation (y = mx + c or x = c)
 - Handles all edge cases (vertical lines, horizontal lines, negative slopes, decimal coordinates)
 
 ## How It Works
 
 ### Architecture
 
-```
 input() → FromStoP() → eqofline_generator() → validator() → output
   ↓           ↓              ↓                      ↓           ↓
 raw string → points → all possible lines → count points → winner
-```
 
 ### Step 1 — Input & Parsing
 
 The parser walks through the input string character by character, extracting numbers by detecting digits, decimal points, and negative signs. It ignores brackets and splits on commas.
 
-
-"[3.0,6.0],[7.0,5.0],[-1.6,7.4],"
-  ↓
-[{3.0, 6.0}, {7.0, 5.0}, {-1.6, 7.4}]
-```
+"[3.0,6.0],[7.0,5.0],[-1.6,7.4]," → [{3.0, 6.0}, {7.0, 5.0}, {-1.6, 7.4}]
 
 ### Step 2 — Line Generation
 
-For every unique pair of points, the algorithm calculates the line equation `y = mx + c` where:
-
+For every unique pair of points, the algorithm calculates the line equation y = mx + c where:
 
 m = (y2 - y1) / (x2 - x1)    (slope)
 c = y1 - m * x1               (y-intercept)
-```
 
 Three cases are handled:
 
 | Case | Condition | Representation |
 |------|-----------|----------------|
-| Normal line | `dx ≠ 0` and `dy ≠ 0` | `y = mx + c` |
-| Horizontal line | `dy = 0` | `y = c` (slope = 0) |
-| Vertical line | `dx = 0` | `x = c` (slope = NaN) |
+| Normal line | dx ≠ 0 and dy ≠ 0 | y = mx + c |
+| Horizontal line | dy = 0 | y = c (slope = 0) |
+| Vertical line | dx = 0 | x = c (slope = NaN) |
 
 ### Step 3 — Duplicate Elimination
 
-Before adding a new line, the duplicate checker compares it against all existing lines using epsilon comparison (`1e-10`) on both slope and intercept. This handles floating point precision issues where mathematically identical lines might have slightly different calculated values.
+Before adding a new line, the duplicate checker compares it against all existing lines using epsilon comparison (1e-10) on both slope and intercept. This handles floating point precision issues where mathematically identical lines might have slightly different calculated values.
 
 ### Step 4 — Validation
 
 Every point is tested against every unique line using the line equation. A point is considered "on the line" if:
 
-
 |y - (mx + c)| < epsilon       (for normal/horizontal lines)
 |x - c| < epsilon              (for vertical lines)
-
 
 ### Step 5 — Result
 
@@ -94,33 +79,26 @@ The line with the highest point count wins.
 | Edge Case | How It's Handled |
 |-----------|-----------------|
 | Vertical lines (undefined slope) | NaN used as slope marker, x-intercept stored |
-| Horizontal lines (zero slope) | Explicit `dy == 0` check |
-| Negative coordinates | Parser detects `-` sign |
-| Decimal coordinates | Parser handles `.` in numbers |
-| Floating point comparison | Epsilon-based comparison (`1e-10`) instead of `==` |
+| Horizontal lines (zero slope) | Explicit dy == 0 check |
+| Negative coordinates | Parser detects - sign |
+| Decimal coordinates | Parser handles . in numbers |
+| Floating point comparison | Epsilon-based comparison (1e-10) instead of == |
 | Duplicate lines | Checked before adding to line collection |
 | Invalid input format | Input validator rejects and re-prompts |
 
-### Usage
+## Usage
 
 ### Compile
 
-```bash
 g++ how_many_p_on_l.cpp -o how_many_p_on_l
-
-```
 
 ### Run
 
-```bash
 ./how_many_p_on_l
-```
 
 ### Input Format
 
-```
 [x1,y1],[x2,y2],[x3,y3],
-```
 
 - Points are enclosed in square brackets
 - Coordinates separated by commas
@@ -130,17 +108,15 @@ g++ how_many_p_on_l.cpp -o how_many_p_on_l
 
 ### Example Session
 
-```
 IMPORTANT ----> enter points in this form : [1.0,2.0],[3.0,4.0], ...etc
 don't use spaces or anything and make sure to type a coma after the last point
 
 Enter Your Data: [0.0,0.0],[1.0,1.0],[2.0,2.0],[3.0,3.0],[4.0,4.0],[1.0,0.0],[2.0,3.0],
 
- ----------------------------- YOUR RESULT ----------------------------- 
+ ----------------------------- YOUR RESULT -----------------------------
 
 Your Winner Line Equations Is y = 1x + (0)
 And The Number Of Points That Fit On It = 5
-```
 
 ## Benchmark Results
 
@@ -172,7 +148,38 @@ The algorithm uses a brute force approach with O(n³) time complexity:
 - **Standard:** C++17
 - **Dependencies:** Standard library only
 - **Floating point handling:** Epsilon comparison (1e-10) for all double comparisons
-- **Vertical line handling:** NaN-based slope marker with `std::isnan()` checks
+- **Vertical line handling:** NaN-based slope marker with std::isnan() checks
+
+## Development Environment
+
+This entire project was built on:
+
+- **Device:** Samsung Galaxy Tab A7 (SM-T505N)
+- **SoC:** Snapdragon 662
+- **RAM:** 3GB (extended to ~9GB effective via ZRAM)
+- **OS:** LineageOS (Android 16) with Debian Bookworm chroot
+- **Editor:** VS Code running inside Debian
+- **Compiler:** g++ via apt
+
+No PC was used in the making of this project.
+
+## What I Learned
+
+- Manual string parsing (building a lexer from scratch)
+- Floating point precision issues and epsilon comparison
+- Handling mathematical edge cases (vertical/horizontal lines, NaN)
+- Input validation with loop-based retry
+- Vector and array manipulation in C++
+- Modular function design
+- The parser took a full day. The algorithm took less. Data handling is always the hard part.
+
+## Future Improvements
+
+- [ ] Show all tied lines when multiple lines share the max point count
+- [ ] Add timing output to measure performance
+- [ ] Optimize with hash maps for O(n²) time complexity
+- [ ] Support reading points from a file
+- [ ] Visualize points and winning line (ASCII or graphical)
 
 ## License
 
