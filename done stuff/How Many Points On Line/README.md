@@ -126,55 +126,8 @@ And The Number Of Points That Fit On It = 5
 
 ## Performance
 
-The algorithm uses a brute force approach with O(n³) time complexity:
+The algorithm uses a brute force approach with O(n³) time complexity
 
-| Points | Pairs Checked | Approximate Time* |
-|--------|--------------|-------------------|
-| 10 | 45 | Instant |
-| 20 | 190 | Instant |
-| 100 | 4,950 | < 1 second |
-| 500 | 124,750 | ~5 minutes |
-
-*Times measured on Snapdragon 662 (Galaxy Tab A7) running Debian chroot
-
-## Technical Details
-
-- **Language:** C++
-- **Standard:** C++17
-- **Dependencies:** Standard library only
-- **Floating point handling:** Epsilon comparison (1e-10) for all double comparisons
-- **Vertical line handling:** NaN-based slope marker with std::isnan() checks
-
-## Development Environment
-
-This entire project was built on:
-
-- **Device:** Samsung Galaxy Tab A7 (SM-T505N)
-- **SoC:** Snapdragon 662
-- **RAM:** 3GB (extended to ~9GB effective via ZRAM)
-- **OS:** LineageOS (Android 16) with Debian Bookworm chroot
-- **Editor:** VS Code running inside Debian
-- **Compiler:** g++ via apt
-
-No PC was used in the making of this project.
-
-## What I Learned
-
-- Manual string parsing (building a lexer from scratch)
-- Floating point precision issues and epsilon comparison
-- Handling mathematical edge cases (vertical/horizontal lines, NaN)
-- Input validation with loop-based retry
-- Vector and array manipulation in C++
-- Modular function design
-- The parser took a full day. The algorithm took less. Data handling is always the hard part.
-
-## Future Improvements
-
-- [ ] Show all tied lines when multiple lines share the max point count
-- [ ] Add timing output to measure performance
-- [ ] Optimize with hash maps for O(n²) time complexity
-- [ ] Support reading points from a file
-- [ ] Visualize points and winning line (ASCII or graphical)
 
 ## License
 
