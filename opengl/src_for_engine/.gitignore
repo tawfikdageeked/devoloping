@@ -1,0 +1,14 @@
+# Compiled binaries
+*.o
+*.out
+
+
+# Any file with no extension (compiled outputs)
+# Add specific names as you create them
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

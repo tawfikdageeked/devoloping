@@ -1,0 +1,14 @@
+// this is how to compile opengl stuff
+g++ test.cpp -o test -lGL -lGLEW -lglfw -lm
+
+-lGL      for GL/glew.h and OpenGL
+-lGLEW    for GL/glew.h
+-lglfw    for GLFW/glfw3.h
+-lm       for cmath (sin, cos, sqrt)
+-I/directory to your source file    to include you own source file
+
+vector, iostream, cstdlib = built-in C++, no -l needed
+
+example
+
+g++ test.cpp -o test -I/devoloping/opengl/src_for_engine -lGL -lGLEW -lglfw -lm
