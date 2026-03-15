@@ -1,11 +1,3 @@
-#ifndef ENGINE_HPP
-#define ENGINE_HPP
-
-
-#include <GLFW/glfw3.h>
-#include <iostream>
-#include <map>
-#include <string>
 
 
 /*
@@ -25,6 +17,15 @@ GLFWwindow* window = glfwCreateWindow(width, height, name of the window, fullscr
 
 */
 
+#ifndef WINDOW_MANAGER_HPP
+#define WINDOW_MANAGER_HPP
+
+
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <iostream>
+#include <map>
+#include <string>
 
 
 
@@ -57,7 +58,6 @@ class WindowMngr
             std::cout << "That's not a defined profile, Please use a defined profile\n";
             return -1;
         }
-
         glfwWindowHint(major_ver_hint, major_ver);
         glfwWindowHint(minor_ver_hint, minor_ver);
         glfwWindowHint(prof, profile);
@@ -88,6 +88,13 @@ class WindowMngr
     void UseWindow(std::string name)
     {
         glfwMakeContextCurrent(windows[name]);
+        glewInit();
+        glewExperimental = GL_TRUE;
+
+        if(glewInit() != GL_TRUE)
+        {
+            std::cout << "Fialed to intialize GLEW\n";
+        }
     }
 
     // IsOpen method checks if the window is opened
@@ -109,7 +116,7 @@ class WindowMngr
         glfwPollEvents();
     }
 
-    // StopWindow method kills windows
+    // StopWindow method kills windowssrc_for_engine
     void StopWindow(std::string name)
     {
         glfwDestroyWindow(windows[name]);
