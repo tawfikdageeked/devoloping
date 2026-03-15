@@ -2,7 +2,7 @@
 
 ### ⚛️ MY PHYSICS ENGINE
 
-<a href="./opengl/src_for_engine/">
+<a href="./phyco/src_for_phyco/">
   <img src="https://img.shields.io/badge/VIEW_ENGINE-dc3545?style=for-the-badge&logo=opengl&logoColor=white" alt="View Physics Engine" height="40">
 </a>
 
