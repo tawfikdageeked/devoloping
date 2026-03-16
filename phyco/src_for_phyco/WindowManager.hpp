@@ -29,6 +29,7 @@ GLFWwindow* window = glfwCreateWindow(width, height, name of the window, fullscr
 
 
 
+std::map<std::string, GLFWwindow*> windows;
 
 class WindowMngr
 {
@@ -69,7 +70,6 @@ class WindowMngr
 
     // first parameter is sort of a pointer to the window so the user doesn't have to interact with GLFW as possible he can use that pointer
     // second is width of the window, third is height of the window third it he title of the window
-    std::map<std::string, GLFWwindow*> windows;
 
     GLFWwindow* CreateWindow(std::string name, int width, int height, const char* title)
     {
@@ -133,6 +133,7 @@ class WindowMngr
     {
         glfwTerminate();
     }
+
 };
 
 WindowMngr WindowManager;

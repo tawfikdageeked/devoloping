@@ -121,6 +121,7 @@ After compiling you have two programs that will sort of interpert the same data 
 
 
 
+
 class ShaderMngr
 {
     public:
@@ -232,29 +233,30 @@ class ShaderMngr
         for (auto& pair : shaders)
         {
             glDeleteProgram(pair.second);
-            shaders.clear();
         }
+        shaders.clear();
     }
 
 
     unsigned int UseDefaultShader()
     {
 
-        const char* vert = 
-            "#version 330 core\n"
-            "layout (location = 0) in vec3 aPos;\n"
-            "void main() {\n"
-            "gl_Position = vec4(aPos, 1.0);\n"
-            "}\n";
+       const char* vert = 
+        "#version 330 core\n"
+        "layout (location = 0) in vec3 aPos;\n"
+        "void main() {\n"
+        "    gl_Position = vec4(aPos, 1.0);\n"
+        "}\n";
 
         const char* frag = 
             "#version 330 core\n"
             "out vec4 FragColor;\n"
+            "uniform vec3 uColor;\n"
             "void main() {\n"
-            "FragColor = vec4(1.0, 0.3, 0.2, 1.0);\n"
+            "   FragColor = vec4(uColor, 1.0);\n"
             "}\n";
 
-            return CreateShaderFromString("default shader",vert, frag);
+            return CreateShaderFromString("DefaultShader",vert, frag);
     }
 };
 
