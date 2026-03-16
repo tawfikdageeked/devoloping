@@ -127,11 +127,6 @@ class ShaderMngr
 
     std::map<std::string, unsigned int> shaders;
     
-    // empty for now will be last step
-    void UseDefaultShader()
-    {
-
-    }
     
     // this method is not made for all users i think most of the will use the Create() methods
     unsigned int Compile(const char* source, GLenum type)
@@ -195,7 +190,7 @@ class ShaderMngr
         return program;
     }
 
-    void UsePrograme(std::string name)
+    void UseProgram(std::string name)
     {
         glUseProgram(shaders[name]);
     }
@@ -237,8 +232,29 @@ class ShaderMngr
         for (auto& pair : shaders)
         {
             glDeleteProgram(pair.second);
+            shaders.clear();
         }
-        shaders.clear();
+    }
+
+
+    unsigned int UseDefaultShader()
+    {
+
+        const char* vert = 
+            "#version 330 core\n"
+            "layout (location = 0) in vec3 aPos;\n"
+            "void main() {\n"
+            "gl_Position = vec4(aPos, 1.0);\n"
+            "}\n";
+
+        const char* frag = 
+            "#version 330 core\n"
+            "out vec4 FragColor;\n"
+            "void main() {\n"
+            "FragColor = vec4(1.0, 0.3, 0.2, 1.0);\n"
+            "}\n";
+
+            return CreateShaderFromString("default shader",vert, frag);
     }
 };
 

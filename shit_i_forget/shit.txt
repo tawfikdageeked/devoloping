@@ -11,4 +11,4 @@ vector, iostream, cstdlib = built-in C++, no -l needed
 
 example
 
-g++ test.cpp -o test -I/devoloping/opengl/src_for_engine -lGL -lGLEW -lglfw -lm
+g++ engine_test.cpp -o engine_test -I/devoloping/phyco/src_for_phyco -lGL -lGLEW -lglfw -lm

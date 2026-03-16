@@ -84,16 +84,22 @@ class WindowMngr
         return windows[name];
     }
 
-    // UseWindow methon is resposible for telling opengl use this window it links the window the graphic api
+    // UseWindow methon is resposible for telling opengl use this window it links the window the graphic api and intializing GLEW
     void UseWindow(std::string name)
     {
         glfwMakeContextCurrent(windows[name]);
-        glewInit();
-        glewExperimental = GL_TRUE;
 
-        if(glewInit() != GL_TRUE)
+        glewExperimental = GL_TRUE;
+        GLenum err = glewInit();
+
+        if(err != GLEW_OK)
         {
-            std::cout << "Fialed to intialize GLEW\n";
+            std::cout << "GLEW Error: " << glewGetErrorString(err) << '\n';
+        }
+        else
+        {
+            std::cout << "GLEW OK\n";
+            std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << '\n';
         }
     }
 
