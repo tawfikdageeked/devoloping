@@ -3,6 +3,7 @@
 
 #include "/devoloping/phyco/src_for_phyco/Objects.hpp"
 #include "/devoloping/phyco/src_for_phyco/WindowManager.hpp"
+#include <vector>
 
 
 
@@ -10,18 +11,27 @@ class PHFW
 {
     public:
 
-    std::string activeWindow;
+    std::vector<Shape*> ShapesOnScreen;
+
 
     void Start(std::string name, int width, int height, const char* title)
     {
         WindowManager.Start();
+        WindowManager.TakeHints();
         WindowManager.CreateWindow(name, width, height, title);
-        WindowManager.UseWindow(name);
-        activeWindow = name;
+        WindowManager.UseWindow(name);    
+        WindowManager.Update(name);
+        WindowManager.Manage();
+    
+        std::cout << "Attention!: Default Parameters Are Used By Phyco.Start()\n";
     }
 
+    void Add(Shape& shape)
+    {
+       ShapesOnScreen.push_back(&shape);
+    }
     
-    void Wait(float seconds, Shape& shape, std::string name)
+    void Wait(float seconds, std::string name)
     {
         double start = glfwGetTime();
 
@@ -30,9 +40,12 @@ class PHFW
             glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            shape.Draw();
+            for(Shape* s: ShapesOnScreen)
+            {
+            s -> Draw();
+            }
 
-            WindowManager.Update(activeWindow);
+            WindowManager.Update(name);
             WindowManager.Manage();
 
         }

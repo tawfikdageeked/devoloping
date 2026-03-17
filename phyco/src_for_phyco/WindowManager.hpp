@@ -47,17 +47,19 @@ class WindowMngr
     void Start()
     {
         glfwInit();
-        glfwWindowHint(major_ver_hint, 3);
-        glfwWindowHint(minor_ver_hint, 3);
-        glfwWindowHint(prof, core);
     }
     // TakeHints method it overrides the default hint values to what ever the user want
-    int TakeHints(int major_ver, int minor_ver, int profile)
+    int TakeHints(int major_ver = 3, int minor_ver = 3, int profile = core)
     {
         if(profile != comp && profile != core)
         {
             std::cout << "That's not a defined profile, Please use a defined profile\n";
             return -1;
+        }
+
+        if(major_ver == 3 && minor_ver == 3 && profile == core)
+        {
+            std::cout << "Attention!: Using Default Hints\n";
         }
         glfwWindowHint(major_ver_hint, major_ver);
         glfwWindowHint(minor_ver_hint, minor_ver);
