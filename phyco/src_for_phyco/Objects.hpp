@@ -8,6 +8,8 @@
 #include <string>
 #include <cmath>
 #include "ShaderManager.hpp"
+#include <vector>
+#include <functional>
 
 
 class Shape
@@ -19,6 +21,21 @@ class Shape
     int vertexcount;
     float r, g, b, opacity;
     float x, y, z;
+
+    std::vector<std::function<void(float)>> updaters;
+
+    void AddUpdater(std::function<void(float)> updater)
+    {
+        updaters.push_back(updater);
+    }
+
+    void UpdateLogic(float dt)
+    {
+        for(std::function<void(float)>& func : updaters)
+        {
+            func(dt);
+        }
+    }
 
     void SetColor(const float color[3], float alpha = 1.0f)
     {
@@ -34,6 +51,13 @@ class Shape
         g = green;
         b = blue;
         opacity = alpha;
+    }
+
+    void SetPosition(float x_cor, float y_cor, float z_cor)
+    {
+        x = x_cor;
+        y = y_cor;
+        z = z_cor;
     }
 
 
@@ -55,6 +79,9 @@ class Shape
     {
         ShaderManager.UseProgram("DefaultShader");
         ShaderManager.SetVec3("DefaultShader", "uColor", r, g, b);
+        
+        ShaderManager.SetVec3("DefaultShader", "uOffset", x, y, z);
+        
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, vertexcount);
     }

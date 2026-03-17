@@ -10,6 +10,8 @@
 class PHFW
 {
     public:
+    
+    float dt;
 
     std::vector<Shape*> ShapesOnScreen;
 
@@ -29,20 +31,30 @@ class PHFW
     void Add(Shape& shape)
     {
        ShapesOnScreen.push_back(&shape);
+
     }
     
     void Wait(float seconds, std::string name)
     {
         double start = glfwGetTime();
-
+        double lastframe = start;
+        
         while (glfwGetTime() - start < seconds)
         {
+            double currentframe = glfwGetTime();
+            dt = currentframe - lastframe;
+            
             glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
-
+            
+            for(Shape* s : ShapesOnScreen)
+            {
+                s -> UpdateLogic(dt);
+            }
+        
             for(Shape* s: ShapesOnScreen)
             {
-            s -> Draw();
+                s -> Draw();
             }
 
             WindowManager.Update(name);

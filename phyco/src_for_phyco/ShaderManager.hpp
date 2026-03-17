@@ -111,6 +111,8 @@ After compiling you have two programs that will sort of interpert the same data 
 
 
 
+
+
 #include <GL/glew.h>
 #include <iostream>
 #include <string>
@@ -244,8 +246,9 @@ class ShaderMngr
        const char* vert = 
         "#version 330 core\n"
         "layout (location = 0) in vec3 aPos;\n"
+        "uniform vec3 uOffset;\n" 
         "void main() {\n"
-        "    gl_Position = vec4(aPos, 1.0);\n"
+        "    gl_Position = vec4(aPos + uOffset, 1.0);\n"
         "}\n";
 
         const char* frag = 
