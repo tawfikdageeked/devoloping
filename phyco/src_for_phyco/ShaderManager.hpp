@@ -118,6 +118,9 @@ After compiling you have two programs that will sort of interpert the same data 
 #include <string>
 #include <fstream>
 #include <map>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 
 
@@ -129,6 +132,11 @@ class ShaderMngr
     public:
 
     std::map<std::string, unsigned int> shaders;
+
+    void SetMat4(std::string name, const char* uniform, glm::mat4 matrix)
+    {
+        glUniformMatrix4fv(glGetUniformLocation(shaders[name], uniform), 1, GL_FALSE, glm::value_ptr(matrix));
+    }
     
     
     // this method is not made for all users i think most of the will use the Create() methods
@@ -240,27 +248,34 @@ class ShaderMngr
     }
 
 
-    unsigned int UseDefaultShader()
+        unsigned int UseDefaultShader()
     {
-
        const char* vert = 
         "#version 330 core\n"
         "layout (location = 0) in vec3 aPos;\n"
+        "layout (location = 1) in vec3 aNormal;\n"
         "uniform vec3 uOffset;\n" 
+        "uniform float uScale;\n"
+        "uniform mat4 uView;\n"
+        "uniform mat4 uProjection;\n"
+        "out vec3 FragNormal;\n"
         "void main() {\n"
-        "    gl_Position = vec4(aPos + uOffset, 1.0);\n"
+        "    gl_Position = uProjection * uView * vec4((aPos * uScale) + uOffset, 1.0);\n"
+        "    FragNormal = aNormal;\n"
         "}\n";
 
         const char* frag = 
-            "#version 330 core\n"
-            "out vec4 FragColor;\n"
-            "uniform vec3 uColor;\n"
-            "void main() {\n"
-            "   FragColor = vec4(uColor, 1.0);\n"
-            "}\n";
+        "#version 330 core\n"
+        "out vec4 FragColor;\n"
+        "in vec3 FragNormal;\n"
+        "uniform vec3 uColor;\n"
+        "void main() {\n"
+        "   FragColor = vec4(uColor, 1.0);\n"
+        "}\n";
 
-            return CreateShaderFromString("DefaultShader",vert, frag);
+        return CreateShaderFromString("DefaultShader", vert, frag);
     }
+
 };
 
 ShaderMngr ShaderManager;

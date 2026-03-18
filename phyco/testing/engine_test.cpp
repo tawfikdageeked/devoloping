@@ -1,24 +1,25 @@
 #include "/devoloping/phyco/src_for_phyco/Phyco.hpp"
-#include <iostream>
 
 int main()
 {
-    Phyco.Start("main", 800, 600, "Phyco Test");
+    Phyco.Start("main", 1200, 800, "The 3D Engine");
     ShaderManager.UseDefaultShader();
 
-    Triangle tri(0.5);
-    tri.SetColor(1.0f, 0.0f, 0.0f);
-    tri.SetPosition(-0.5f, -0.6f, 0.0f);
-    
-    Phyco.Add(tri);
+    Phyco.SetCamera(0.0f, 0.0f, 5.0f); 
 
-    tri.AddUpdater([&](float dt) {
-        tri.x += 0.01f * dt;
-        tri.y += 0.01f * dt;
+   
+
+    Cube myCube(1.0f);
+    myCube.SetPosition(0.0f, 0.0f, 0.0f);
+    myCube.SetColor(Colors::Cyan);
+    Phyco.Add(myCube);
+
+    myCube.AddUpdater([&](float dt) {
+        myCube.x += 0.5f * dt;
+        if (myCube.x > 2.0f) myCube.x = -2.0f;
     });
-    
 
-    Phyco.Wait(4, "main");
+    Phyco.Run();
 
     return 0;
 }

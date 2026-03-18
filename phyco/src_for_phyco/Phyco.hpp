@@ -10,60 +10,79 @@
 class PHFW
 {
     public:
-    
     float dt;
+    std::string activeWindow;
+    std::vector<Shape2D*> ShapesOnScreen;
 
-    std::vector<Shape*> ShapesOnScreen;
-
+    int winWidth, winHeight;
+    
+    glm::vec3 cameraPos   = glm::vec3(0.0f, 1.0f, 4.0f); 
+    glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f); 
+    glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f, 0.0f);
 
     void Start(std::string name, int width, int height, const char* title)
     {
+        winWidth = width;
+        winHeight = height;
+
         WindowManager.Start();
         WindowManager.TakeHints();
         WindowManager.CreateWindow(name, width, height, title);
         WindowManager.UseWindow(name);    
-        WindowManager.Update(name);
+        
+        activeWindow = name;
+
+        glEnable(GL_DEPTH_TEST);
+
+        WindowManager.Update(activeWindow);
         WindowManager.Manage();
-    
+
         std::cout << "Attention!: Default Parameters Are Used By Phyco.Start()\n";
     }
 
-    void Add(Shape& shape)
+    void Add(Shape2D& shape)
     {
        ShapesOnScreen.push_back(&shape);
-
     }
-    
-    void Wait(float seconds, std::string name)
+
+    void SetCamera(float x, float y, float z)
     {
-        double start = glfwGetTime();
-        double lastframe = start;
-        
-        while (glfwGetTime() - start < seconds)
+        cameraPos = glm::vec3(x, y, z);
+    }
+
+    void Run()
+    {
+        double lastframe = glfwGetTime();
+
+        while (WindowManager.IsOpen(activeWindow))
         {
             double currentframe = glfwGetTime();
             dt = currentframe - lastframe;
-            
+            lastframe = currentframe;
+
             glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
-            
-            for(Shape* s : ShapesOnScreen)
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+            glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+            glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)winWidth / (float)winHeight, 0.1f, 100.0f);
+
+            ShaderManager.SetMat4("DefaultShader", "uView", view);
+            ShaderManager.SetMat4("DefaultShader", "uProjection", projection);
+
+            for(Shape2D* s : ShapesOnScreen)
             {
-                s -> UpdateLogic(dt);
-            }
-        
-            for(Shape* s: ShapesOnScreen)
-            {
-                s -> Draw();
+                s->UpdateLogic(dt);
             }
 
-            WindowManager.Update(name);
+            for(Shape2D* s: ShapesOnScreen)
+            {
+                s->Draw();
+            }
+
+            WindowManager.Update(activeWindow);
             WindowManager.Manage();
-
         }
     }
-
-
 };
 
 PHFW Phyco;
