@@ -51,9 +51,12 @@ class PHFW
        Shapes3DOnScreen.push_back(&shape);
     }
 
-    void SetCamera(float x, float y, float z)
+        void SetCamera(float x, float y, float z)
     {
         cameraPos = glm::vec3(x, y, z);
+        
+        // SMART CAMERA: Automatically calculate the angle to look at the center of the universe
+        cameraFront = glm::normalize(glm::vec3(0.0f, 0.0f, 0.0f) - cameraPos);
     }
 
     void Run()
@@ -72,28 +75,21 @@ class PHFW
             glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
             glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)winWidth / (float)winHeight, 0.1f, 100.0f);
 
+            // 1. Turn the GPU Shader ON
+            ShaderManager.UseProgram("DefaultShader");
+
+            // 2. Send the Camera Lenses and Position to the GPU
             ShaderManager.SetMat4("DefaultShader", "uView", view);
             ShaderManager.SetMat4("DefaultShader", "uProjection", projection);
+            ShaderManager.SetVec3("DefaultShader", "uCameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
 
-            for(Shape2D* s : Shapes2DOnScreen)
-            {
-                s->UpdateLogic(dt);
-            }
+            // 3. Update and Draw 2D Shapes
+            for(Shape2D* s : Shapes2DOnScreen) { s->UpdateLogic(dt); }
+            for(Shape2D* s: Shapes2DOnScreen) { s->Draw(); }
 
-            for(Shape2D* s: Shapes2DOnScreen)
-            {
-                s->Draw();
-            }
-
-            for(Shape3D* s : Shapes3DOnScreen)
-            {
-                s->UpdateLogic(dt);
-            }
-
-            for(Shape3D* s: Shapes3DOnScreen)
-            {
-                s->Draw();
-            }
+            // 4. Update and Draw 3D Shapes
+            for(Shape3D* s : Shapes3DOnScreen) { s->UpdateLogic(dt); }
+            for(Shape3D* s: Shapes3DOnScreen) { s->Draw(); }
 
             WindowManager.Update(activeWindow);
             WindowManager.Manage();

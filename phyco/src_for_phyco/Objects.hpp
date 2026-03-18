@@ -10,6 +10,9 @@
 #include <functional>
 #include "ShaderManager.hpp"
 #include "Colors.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 
 class Shape2D
 {   
@@ -20,6 +23,10 @@ class Shape2D
     float r, g, b, opacity;
     float x, y, z;
     float scale = 1.0f;
+
+    float rx = 0.0f;
+    float ry = 0.0f;
+    float rz = 0.0f;
 
     std::string shaderName = "DefaultShader";
     unsigned int drawMode = GL_TRIANGLES; 
@@ -86,12 +93,22 @@ class Shape2D
     {
         ShaderManager.UseProgram(shaderName);
         ShaderManager.SetVec3(shaderName, "uColor", r, g, b);
-        ShaderManager.SetVec3(shaderName, "uOffset", x, y, z);
-        ShaderManager.SetFloat(shaderName, "uScale", scale);
+        
+        // Build the Master Model Matrix
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(x, y, z));
+        model = glm::rotate(model, glm::radians(rx), glm::vec3(1.0f, 0.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(ry), glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(rz), glm::vec3(0.0f, 0.0f, 1.0f));
+        model = glm::scale(model, glm::vec3(scale));
+
+        // Send it to the Shader
+        ShaderManager.SetMat4(shaderName, "uModel", model);
 
         glBindVertexArray(VAO);
         glDrawArrays(drawMode, 0, vertexcount);
     }
+
 
     void Delete()
     {
@@ -288,6 +305,11 @@ class Shape3D
     float x, y, z;
     float scale = 1.0f;
 
+    float rx = 0.0f;
+    float ry = 0.0f;
+    float rz = 0.0f;
+
+
     std::string shaderName = "DefaultShader";
     unsigned int drawMode = GL_TRIANGLES; 
 
@@ -359,14 +381,22 @@ class Shape3D
     {
         ShaderManager.UseProgram(shaderName);
         ShaderManager.SetVec3(shaderName, "uColor", r, g, b);
-        ShaderManager.SetVec3(shaderName, "uOffset", x, y, z);
-        ShaderManager.SetFloat(shaderName, "uScale", scale);
+        
+        // Build the Master Model Matrix
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(x, y, z));
+        model = glm::rotate(model, glm::radians(rx), glm::vec3(1.0f, 0.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(ry), glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(rz), glm::vec3(0.0f, 0.0f, 1.0f));
+        model = glm::scale(model, glm::vec3(scale));
+
+        // Send it to the Shader
+        ShaderManager.SetMat4(shaderName, "uModel", model);
 
         glBindVertexArray(VAO);
-        
-        // Reforged: Use glDrawElements to draw using the Index Buffer
         glDrawElements(drawMode, indexCount, GL_UNSIGNED_INT, 0); 
     }
+
 
     void Delete()
     {
