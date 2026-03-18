@@ -248,7 +248,7 @@ class ShaderMngr
     }
 
 
-        unsigned int UseDefaultShader()
+            unsigned int UseDefaultShader()
     {
        const char* vert = 
         "#version 330 core\n"
@@ -258,19 +258,52 @@ class ShaderMngr
         "uniform float uScale;\n"
         "uniform mat4 uView;\n"
         "uniform mat4 uProjection;\n"
-        "out vec3 FragNormal;\n"
+        
+        "out vec3 FragPos;\n"
+        "out vec3 Normal;\n"
+        
         "void main() {\n"
-        "    gl_Position = uProjection * uView * vec4((aPos * uScale) + uOffset, 1.0);\n"
-        "    FragNormal = aNormal;\n"
+        "    // Calculate world position of the vertex\n"
+        "    FragPos = vec3(vec4((aPos * uScale) + uOffset, 1.0));\n"
+        "    Normal = aNormal;\n" 
+        "    gl_Position = uProjection * uView * vec4(FragPos, 1.0);\n"
         "}\n";
 
         const char* frag = 
         "#version 330 core\n"
         "out vec4 FragColor;\n"
-        "in vec3 FragNormal;\n"
+        
+        "in vec3 FragPos;\n"
+        "in vec3 Normal;\n"
+        
         "uniform vec3 uColor;\n"
+        "uniform vec3 uCameraPos;\n" 
+        
         "void main() {\n"
-        "   FragColor = vec4(uColor, 1.0);\n"
+        "   // 1. Hardcode a white light bulb floating slightly above and to the right\n"
+        "   vec3 lightPos = vec3(2.0, 4.0, 3.0);\n"
+        "   vec3 lightColor = vec3(1.0, 1.0, 1.0);\n"
+
+        "   // 2. Ambient Light (Soft base lighting)\n"
+        "   float ambientStrength = 0.25;\n"
+        "   vec3 ambient = ambientStrength * lightColor;\n"
+
+        "   // 3. Diffuse Light (Directional shadows)\n"
+        "   vec3 norm = normalize(Normal);\n"
+        "   vec3 lightDir = normalize(lightPos - FragPos);\n"
+        "   float diff = max(dot(norm, lightDir), 0.0);\n"
+        "   vec3 diffuse = diff * lightColor;\n"
+
+        "   // 4. Specular Highlight (The shiny reflection)\n"
+        "   float specularStrength = 0.5;\n"
+        "   vec3 viewDir = normalize(uCameraPos - FragPos);\n"
+        "   vec3 reflectDir = reflect(-lightDir, norm);\n"
+        "   float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);\n" 
+        "   vec3 specular = specularStrength * spec * lightColor;\n"
+
+        "   // Combine everything and paint the pixel\n"
+        "   vec3 result = (ambient + diffuse + specular) * uColor;\n"
+        "   FragColor = vec4(result, 1.0);\n"
         "}\n";
 
         return CreateShaderFromString("DefaultShader", vert, frag);

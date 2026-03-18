@@ -12,7 +12,8 @@ class PHFW
     public:
     float dt;
     std::string activeWindow;
-    std::vector<Shape2D*> ShapesOnScreen;
+    std::vector<Shape2D*> Shapes2DOnScreen;
+    std::vector<Shape3D*> Shapes3DOnScreen;
 
     int winWidth, winHeight;
     
@@ -42,7 +43,12 @@ class PHFW
 
     void Add(Shape2D& shape)
     {
-       ShapesOnScreen.push_back(&shape);
+       Shapes2DOnScreen.push_back(&shape);
+    }
+
+    void Add(Shape3D& shape)
+    {
+       Shapes3DOnScreen.push_back(&shape);
     }
 
     void SetCamera(float x, float y, float z)
@@ -69,12 +75,22 @@ class PHFW
             ShaderManager.SetMat4("DefaultShader", "uView", view);
             ShaderManager.SetMat4("DefaultShader", "uProjection", projection);
 
-            for(Shape2D* s : ShapesOnScreen)
+            for(Shape2D* s : Shapes2DOnScreen)
             {
                 s->UpdateLogic(dt);
             }
 
-            for(Shape2D* s: ShapesOnScreen)
+            for(Shape2D* s: Shapes2DOnScreen)
+            {
+                s->Draw();
+            }
+
+            for(Shape3D* s : Shapes3DOnScreen)
+            {
+                s->UpdateLogic(dt);
+            }
+
+            for(Shape3D* s: Shapes3DOnScreen)
             {
                 s->Draw();
             }
