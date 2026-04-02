@@ -1,0 +1,83 @@
+══════════════════════════════════════════
+         G++ COMPILATION CHEATSHEET
+══════════════════════════════════════════
+
+BASIC
+  g++ file.cpp                    compile, output is a.out
+  g++ file.cpp -o myprogram      compile, name the output
+  g++ file.cpp -o myprogram && ./myprogram   compile and run
+
+MULTIPLE FILES
+  g++ main.cpp utils.cpp -o myprogram
+  g++ *.cpp -o myprogram          compile all cpp files
+
+WARNINGS (always use these)
+  -Wall              all common warnings
+  -Wextra            extra warnings
+  -Werror            treat warnings as errors
+  -pedantic          strict standard compliance
+
+  g++ -Wall -Wextra file.cpp -o myprogram
+
+OPTIMIZATION
+  -O0                no optimization (default, fast compile)
+  -O1                basic optimization
+  -O2                good optimization
+  -O3                max optimization
+  -Os                optimize for size
+
+  g++ -O2 file.cpp -o myprogram
+
+C++ STANDARD
+  -std=c++11
+  -std=c++14
+  -std=c++17
+  -std=c++20
+  -std=c++23
+
+  g++ -std=c++17 file.cpp -o myprogram
+
+DEBUGGING
+  -g                 include debug info (for gdb)
+  -fsanitize=address memory error detection
+  -fsanitize=undefined undefined behavior detection
+
+  g++ -g -fsanitize=address file.cpp -o myprogram
+
+OPENGL
+  g++ file.cpp -o myprogram -lGL -lGLU -lglut
+  g++ file.cpp -o myprogram -lGL -lGLEW -lglfw
+  g++ file.cpp -o myprogram $(pkg-config --cflags --libs gl glew glfw3)
+
+LIBRARIES (linking)
+  -l                 link a library (-lGL -lm -lpthread)
+  -L                 library search path (-L/usr/local/lib)
+  -I                 header search path (-I/usr/local/include)
+  -rpath             runtime library path
+
+  g++ file.cpp -I./include -L./lib -lmylib -o myprogram
+
+COMMON COMBOS
+
+  daily coding:
+  g++ -Wall -Wextra -std=c++17 file.cpp -o myprogram
+
+  debugging:
+  g++ -Wall -Wextra -std=c++17 -g -fsanitize=address file.cpp -o myprogram
+
+  release:
+  g++ -Wall -Wextra -std=c++17 -O2 file.cpp -o myprogram
+
+  opengl project:
+  g++ -Wall -std=c++17 -O2 *.cpp -o myprogram -lGL -lGLEW -lglfw
+
+  multiple files with headers:
+  g++ -Wall -std=c++17 -I./include src/*.cpp -o myprogram
+
+USEFUL
+  g++ -E file.cpp          preprocessor output only
+  g++ -S file.cpp          assembly output only
+  g++ -c file.cpp          compile only, no linking (makes .o)
+  g++ -v file.cpp          verbose, shows everything
+  g++ -M file.cpp          show all dependencies
+  g++ --version            check version

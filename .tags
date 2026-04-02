@@ -1,0 +1,998 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/devoloping/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+ANIMATIONS_HPP	/devoloping/phyco/src_for_phyco/Animations.hpp	/^#define ANIMATIONS_HPP$/;"	d
+Add	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Add(Light& light) { lights.push_back(&light); Shapes3DOnScreen.push_back(&light); }$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Light & light)
+Add	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Add(Shape2D& shape) { Shapes2DOnScreen.push_back(&shape); }$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape2D & shape)
+Add	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Add(Shape3D& shape) { Shapes3DOnScreen.push_back(&shape); }$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape3D & shape)
+AddLine	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void AddLine(std::vector<float>& verts, float x1, float y1, float x2, float y2, float thickn/;"	f	class:FunctionGraph	typeref:typename:void	access:private	signature:(std::vector<float> & verts,float x1,float y1,float x2,float y2,float thickness)
+AddUpdater	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void AddUpdater(std::function<void(float)> updater)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(std::function<void (float)> updater)
+AddUpdater	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void AddUpdater(std::function<void(float)> updater)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(std::function<void (float)> updater)
+Anim	/devoloping/phyco/src_for_phyco/Animations.hpp	/^struct Anim$/;"	s
+Anim::IsDone	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    bool IsDone() { return elapsed >= duration; }$/;"	f	struct:Anim	typeref:typename:bool	access:public	signature:()
+Anim::SetEase	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    Anim& SetEase(std::function<float(float)> e)$/;"	f	struct:Anim	typeref:typename:Anim &	access:public	signature:(std::function<float (float)> e)
+Anim::Update	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    void Update(float dt)$/;"	f	struct:Anim	typeref:typename:void	access:public	signature:(float dt)
+Anim::apply	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    std::function<void(float)> apply;$/;"	m	struct:Anim	typeref:typename:std::function<void (float)>	access:public
+Anim::duration	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    float duration = 1.0f;$/;"	m	struct:Anim	typeref:typename:float	access:public
+Anim::easing	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    std::function<float(float)> easing = Ease::Smooth;$/;"	m	struct:Anim	typeref:typename:std::function<float (float)>	access:public
+Anim::elapsed	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    float elapsed = 0.0f;$/;"	m	struct:Anim	typeref:typename:float	access:public
+Anim::onDone	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    std::function<void()> onDone = nullptr;$/;"	m	struct:Anim	typeref:typename:std::function<void ()>	access:public
+Arrow	/devoloping/opengl/falling-ball.cpp	/^  Arrow(Vec2D start, Vec2D end) : start(start), end(end) {}$/;"	f	class:Arrow	file:	access:private	signature:(Vec2D start,Vec2D end)
+Arrow	/devoloping/opengl/falling-ball.cpp	/^class Arrow$/;"	c	file:
+Arrow2D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Arrow2D(float sx, float sy, float ex, float ey,$/;"	f	class:Arrow2D	access:public	signature:(float sx,float sy,float ex,float ey,float stroke=0.02f,float headW=0.06f,float headLen=0.1f)
+Arrow2D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Arrow2D : public Shape2D$/;"	c	inherits:Shape2D
+Arrow2D::Arrow2D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Arrow2D(float sx, float sy, float ex, float ey,$/;"	f	class:Arrow2D	access:public	signature:(float sx,float sy,float ex,float ey,float stroke=0.02f,float headW=0.06f,float headLen=0.1f)
+Arrow2D::Build	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Build()$/;"	f	class:Arrow2D	typeref:typename:void	access:private	signature:()
+Arrow2D::Rebuild	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Rebuild()$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:()
+Arrow2D::SetEnd	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetEnd(float ex, float ey)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float ex,float ey)
+Arrow2D::SetHeadLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadLength(float length)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float length)
+Arrow2D::SetHeadWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadWidth(float width)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float width)
+Arrow2D::SetStart	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetStart(float sx, float sy)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float sx,float sy)
+Arrow2D::SetStrokeWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetStrokeWidth(float width)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float width)
+Arrow2D::endX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow2D::endY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow2D::headLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headLength;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow2D::headWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headWidth;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow2D::startX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow2D::startY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow2D::strokeWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float strokeWidth;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+Arrow3D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Arrow3D(float sx, float sy, float sz, float ex, float ey, float ez,$/;"	f	class:Arrow3D	access:public	signature:(float sx,float sy,float sz,float ex,float ey,float ez,float shaftR=0.03f,float headR=0.08f,float headLen=0.2f,int segments=32)
+Arrow3D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Arrow3D : public Shape3D$/;"	c	inherits:Shape3D
+Arrow3D::Arrow3D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Arrow3D(float sx, float sy, float sz, float ex, float ey, float ez,$/;"	f	class:Arrow3D	access:public	signature:(float sx,float sy,float sz,float ex,float ey,float ez,float shaftR=0.03f,float headR=0.08f,float headLen=0.2f,int segments=32)
+Arrow3D::Build	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Build(int segments)$/;"	f	class:Arrow3D	typeref:typename:void	access:private	signature:(int segments)
+Arrow3D::Rebuild	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Rebuild(int segments = 32)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(int segments=32)
+Arrow3D::SetEnd	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetEnd(float ex, float ey, float ez)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float ex,float ey,float ez)
+Arrow3D::SetHeadLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadLength(float length)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float length)
+Arrow3D::SetHeadRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadRadius(float radius)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float radius)
+Arrow3D::SetShaftRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetShaftRadius(float radius)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float radius)
+Arrow3D::SetStart	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetStart(float sx, float sy, float sz)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float sx,float sy,float sz)
+Arrow3D::endX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY, endZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::endY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY, endZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::endZ	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY, endZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::headLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headLength;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::headRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headRadius;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::shaftRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float shaftRadius;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::startX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY, startZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::startY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY, startZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow3D::startZ	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY, startZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+Arrow::Arrow	/devoloping/opengl/falling-ball.cpp	/^  Arrow(Vec2D start, Vec2D end) : start(start), end(end) {}$/;"	f	class:Arrow	file:	access:private	signature:(Vec2D start,Vec2D end)
+Arrow::end	/devoloping/opengl/falling-ball.cpp	/^  Vec2D end;$/;"	m	class:Arrow	typeref:typename:Vec2D	file:	access:private
+Arrow::start	/devoloping/opengl/falling-ball.cpp	/^  Vec2D start;$/;"	m	class:Arrow	typeref:typename:Vec2D	file:	access:private
+Arrow::unitVec	/devoloping/opengl/falling-ball.cpp	/^  Vec2D unitVec = Normalized(end - start);$/;"	m	class:Arrow	typeref:typename:Vec2D	file:	access:private
+Arrow::vertices	/devoloping/opengl/falling-ball.cpp	/^  float vertices[];$/;"	m	class:Arrow	typeref:typename:float[]	file:	access:private
+Asteroid	/devoloping/shit_i_forget/test3.cpp	/^struct Asteroid {$/;"	s	file:
+Asteroid::b	/devoloping/shit_i_forget/test3.cpp	/^    float r, g, b;    \/\/ Individual color$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Asteroid::dx	/devoloping/shit_i_forget/test3.cpp	/^    float dx, dy;     \/\/ Velocity (Speed and direction)$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Asteroid::dy	/devoloping/shit_i_forget/test3.cpp	/^    float dx, dy;     \/\/ Velocity (Speed and direction)$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Asteroid::g	/devoloping/shit_i_forget/test3.cpp	/^    float r, g, b;    \/\/ Individual color$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Asteroid::r	/devoloping/shit_i_forget/test3.cpp	/^    float r, g, b;    \/\/ Individual color$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Asteroid::x	/devoloping/shit_i_forget/test3.cpp	/^    float x, y;       \/\/ Current position$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Asteroid::y	/devoloping/shit_i_forget/test3.cpp	/^    float x, y;       \/\/ Current position$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+Axis	/devoloping/phyco/src_for_phyco/Objects.hpp	/^   Axis(Direction d, float minV, float maxV, float step,$/;"	f	class:Axis	access:public	signature:(Direction d,float minV,float maxV,float step,float unit=0.5f,float stroke=0.025f,float tick=0.04f,float tipW=0.04f,float tipL=0.08f,bool posTip=true,bool negTip=true)
+Axis	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Axis : public Shape2D$/;"	c	inherits:Shape2D
+Axis::Axis	/devoloping/phyco/src_for_phyco/Objects.hpp	/^   Axis(Direction d, float minV, float maxV, float step,$/;"	f	class:Axis	access:public	signature:(Direction d,float minV,float maxV,float step,float unit=0.5f,float stroke=0.025f,float tick=0.04f,float tipW=0.04f,float tipL=0.08f,bool posTip=true,bool negTip=true)
+Axis::Build	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Build()$/;"	f	class:Axis	typeref:typename:void	access:private	signature:()
+Axis::BuildAxis	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void BuildAxis(std::vector<float>& verts,$/;"	f	class:Axis	typeref:typename:void	access:private	signature:(std::vector<float> & verts,float sx,float sy,float sz,float ex,float ey,float ez,float px,float py,float pz)
+Axis::Direction	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	g	class:Axis	access:public
+Axis::Math	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float Math(float worldVal) { return worldVal \/ unitSize; }$/;"	f	class:Axis	typeref:typename:float	access:public	signature:(float worldVal)
+Axis::Rebuild	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Rebuild()$/;"	f	class:Axis	typeref:typename:void	access:public	signature:()
+Axis::World	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float World(float mathVal) { return mathVal * unitSize; }$/;"	f	class:Axis	typeref:typename:float	access:public	signature:(float mathVal)
+Axis::X	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	e	enum:Axis::Direction	access:public
+Axis::Y	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	e	enum:Axis::Direction	access:public
+Axis::Z	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	e	enum:Axis::Direction	access:public
+Axis::dir	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Direction dir;$/;"	m	class:Axis	typeref:typename:Direction	access:public
+Axis::maxVal	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float minVal, maxVal, stepVal;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::minVal	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float minVal, maxVal, stepVal;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::showNegativeTip	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    bool showNegativeTip;$/;"	m	class:Axis	typeref:typename:bool	access:public
+Axis::showPositiveTip	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    bool showPositiveTip;$/;"	m	class:Axis	typeref:typename:bool	access:public
+Axis::stepVal	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float minVal, maxVal, stepVal;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::strokeWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float strokeWidth;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::tickSize	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float tickSize;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::tipLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float tipLength;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::tipWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float tipWidth;$/;"	m	class:Axis	typeref:typename:float	access:public
+Axis::unitSize	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float unitSize;$/;"	m	class:Axis	typeref:typename:float	access:public
+Black	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Black[3]      = {0.08f, 0.08f, 0.10f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Blue	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Blue[3]       = {0.20f, 0.50f, 0.85f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Body	/devoloping/shit_i_forget/test.cpp	/^struct Body {$/;"	s	file:
+Body::a	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+Body::b	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+Body::g	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+Body::mass	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+Body::r	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+Body::radius	/devoloping/shit_i_forget/test.cpp	/^    float radius;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+Body::vx	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+Body::vy	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+Body::x	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+Body::y	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+Build	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Build()$/;"	f	class:Arrow2D	typeref:typename:void	access:private	signature:()
+Build	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Build()$/;"	f	class:Axis	typeref:typename:void	access:private	signature:()
+Build	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Build(int segments)$/;"	f	class:Arrow3D	typeref:typename:void	access:private	signature:(int segments)
+BuildAxis	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void BuildAxis(std::vector<float>& verts,$/;"	f	class:Axis	typeref:typename:void	access:private	signature:(std::vector<float> & verts,float sx,float sy,float sz,float ex,float ey,float ez,float px,float py,float pz)
+COLORS_HPP	/devoloping/phyco/src_for_phyco/Colors.hpp	/^#define COLORS_HPP$/;"	d
+CharGlyph	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^struct CharGlyph$/;"	s
+CharGlyph::advance	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    long advance;$/;"	m	struct:CharGlyph	typeref:typename:long	access:public
+CharGlyph::bearingX	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int bearingX, bearingY;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+CharGlyph::bearingY	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int bearingX, bearingY;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+CharGlyph::height	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int width, height;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+CharGlyph::textureID	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    unsigned int textureID;$/;"	m	struct:CharGlyph	typeref:typename:unsigned int	access:public
+CharGlyph::width	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int width, height;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+Circle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Circle(float radius, int segments = 50)$/;"	f	class:Circle	access:public	signature:(float radius,int segments=50)
+Circle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Circle : public Shape2D$/;"	c	inherits:Shape2D
+Circle::Circle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Circle(float radius, int segments = 50)$/;"	f	class:Circle	access:public	signature:(float radius,int segments=50)
+CleanUp	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void CleanUp()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+ColorTo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim ColorTo(T& shape, const float color[3], float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,const float color[3],float dur)
+ColorTo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim ColorTo(T& shape, float tr, float tg, float tb, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float tr,float tg,float tb,float dur)
+ColorTo::State::sb	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:float	access:public
+ColorTo::State::sg	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:float	access:public
+ColorTo::State::sr	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:float	access:public
+ColorTo::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:bool	access:public
+Colors	/devoloping/phyco/src_for_phyco/Colors.hpp	/^namespace Colors$/;"	n
+Colors::Black	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Black[3]      = {0.08f, 0.08f, 0.10f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Blue	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Blue[3]       = {0.20f, 0.50f, 0.85f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Cyan	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Cyan[3]       = {0.20f, 0.75f, 0.80f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::DarkGray	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float DarkGray[3]   = {0.20f, 0.20f, 0.22f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Gray	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Gray[3]       = {0.50f, 0.50f, 0.52f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Green	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Green[3]      = {0.25f, 0.70f, 0.35f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Magenta	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Magenta[3]    = {0.80f, 0.25f, 0.60f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Orange	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Orange[3]     = {0.90f, 0.50f, 0.15f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Purple	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Purple[3]     = {0.60f, 0.30f, 0.80f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Red	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Red[3]        = {0.85f, 0.25f, 0.25f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::White	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float White[3]      = {0.92f, 0.92f, 0.92f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Colors::Yellow	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Yellow[3]     = {0.90f, 0.75f, 0.20f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Compile	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    unsigned int Compile(const char* source, GLenum type)$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:(const char * source,GLenum type)
+Cone	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Cone(float height = 1.0f, float radius = 0.5f, int segments = 32)$/;"	f	class:Cone	access:public	signature:(float height=1.0f,float radius=0.5f,int segments=32)
+Cone	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Cone : public Shape3D$/;"	c	inherits:Shape3D
+Cone::Cone	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Cone(float height = 1.0f, float radius = 0.5f, int segments = 32)$/;"	f	class:Cone	access:public	signature:(float height=1.0f,float radius=0.5f,int segments=32)
+CreateShaderFromString	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    unsigned int CreateShaderFromString(std::string name, const char* vertex_shader, const char*/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:(std::string name,const char * vertex_shader,const char * fragment_shader)
+CreateWindow	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    GLFWwindow* CreateWindow(std::string name, int width, int height, const char* title)$/;"	f	class:WindowMngr	typeref:typename:GLFWwindow *	access:public	signature:(std::string name,int width,int height,const char * title)
+Cube	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    Cube(float side_length, float x_cor, float y_cor, float z_cor)$/;"	f	class:Cube	file:	access:public	signature:(float side_length,float x_cor,float y_cor,float z_cor)
+Cube	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^class Cube$/;"	c	file:
+Cube	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Cube(float size = 1.0f)$/;"	f	class:Cube	access:public	signature:(float size=1.0f)
+Cube	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Cube : public Shape3D$/;"	c	inherits:Shape3D
+Cube::Cube	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    Cube(float side_length, float x_cor, float y_cor, float z_cor)$/;"	f	class:Cube	file:	access:public	signature:(float side_length,float x_cor,float y_cor,float z_cor)
+Cube::Cube	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Cube(float size = 1.0f)$/;"	f	class:Cube	access:public	signature:(float size=1.0f)
+Cube::indices	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    std::vector<unsigned int> indices;$/;"	m	class:Cube	typeref:typename:std::vector<unsigned int>	file:	access:public
+Cube::s	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float s;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+Cube::vertices	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    std::vector<float> vertices;$/;"	m	class:Cube	typeref:typename:std::vector<float>	file:	access:public
+Cube::x	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float x, y, z;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+Cube::y	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float x, y, z;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+Cube::z	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float x, y, z;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+Cyan	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Cyan[3]       = {0.20f, 0.75f, 0.80f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Cylinder	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Cylinder(float height = 1.0f, float radius = 0.5f, int segments = 32)$/;"	f	class:Cylinder	access:public	signature:(float height=1.0f,float radius=0.5f,int segments=32)
+Cylinder	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Cylinder : public Shape3D$/;"	c	inherits:Shape3D
+Cylinder::Cylinder	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Cylinder(float height = 1.0f, float radius = 0.5f, int segments = 32)$/;"	f	class:Cylinder	access:public	signature:(float height=1.0f,float radius=0.5f,int segments=32)
+DarkGray	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float DarkGray[3]   = {0.20f, 0.20f, 0.22f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Delete	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Delete()$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:()
+Delete	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Delete()$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:()
+DeleteAllShader	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void DeleteAllShader()$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:()
+DeleteShader	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void DeleteShader(std::string name)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name)
+Direction	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	g	class:Axis	access:public
+Dodecahedron	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Dodecahedron(float radius = 1.0f)$/;"	f	class:Dodecahedron	access:public	signature:(float radius=1.0f)
+Dodecahedron	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Dodecahedron : public Shape3D$/;"	c	inherits:Shape3D
+Dodecahedron::Dodecahedron	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Dodecahedron(float radius = 1.0f)$/;"	f	class:Dodecahedron	access:public	signature:(float radius=1.0f)
+Draw	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    virtual void Draw()$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:()
+Draw	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Draw() override$/;"	f	class:Light	typeref:typename:void	access:public	signature:()
+Draw	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Draw()$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:()
+EBO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO, VBO, EBO; \/\/ Reforged to use an Element Buffer Object for indexing$/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+Ease	/devoloping/phyco/src_for_phyco/Animations.hpp	/^namespace Ease$/;"	n
+Ease::InBack	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InBack(float t) { float s = 1.70158f; return t * t * ((s + 1.0f) * t - s); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InBounce	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InBounce(float t) { return 1.0f - OutBounce(1.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InCubic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InCubic(float t) { return t * t * t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InElastic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InElastic(float t) { return 1.0f - OutElastic(1.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InExpo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InExpo(float t) { return t == 0.0f ? 0.0f : powf(2.0f, 10.0f * (t - 1.0f)); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InOutCubic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InOutCubic(float t) { return t < 0.5f ? 4.0f * t * t * t : (t - 1.0f) * (2.0f */;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InOutQuad	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InOutQuad(float t) { return t < 0.5f ? 2.0f * t * t : -1.0f + (4.0f - 2.0f * t)/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InQuad	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InQuad(float t) { return t * t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::InQuart	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InQuart(float t) { return t * t * t * t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::Linear	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float Linear(float t) { return t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutBack	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutBack(float t) { float s = 1.70158f; t -= 1.0f; return t * t * ((s + 1.0f) * /;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutBounce	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutBounce(float t)$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutCubic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutCubic(float t) { float u = t - 1.0f; return u * u * u + 1.0f; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutElastic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutElastic(float t)$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutExpo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutExpo(float t) { return t == 1.0f ? 1.0f : 1.0f - powf(2.0f, -10.0f * t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutQuad	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutQuad(float t) { return t * (2.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::OutQuart	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutQuart(float t) { float u = t - 1.0f; return 1.0f - u * u * u * u; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::RushFrom	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float RushFrom(float t) { return 1.0f - RushInto(1.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::RushInto	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float RushInto(float t) { return 2.0f * t * t \/ (1.0f + t * t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::Smooth	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float Smooth(float t) { return t * t * (3.0f - 2.0f * t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Ease::ThereAndBack	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float ThereAndBack(float t) { return t < 0.5f ? Smooth(2.0f * t) : Smooth(2.0f * (1.0/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+FadeIn	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim FadeIn(T& shape, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float dur)
+FadeIn::State::startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeIn::State	typeref:typename:float	access:public
+FadeIn::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeIn::State	typeref:typename:bool	access:public
+FadeOut	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim FadeOut(T& shape, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float dur)
+FadeOut::State::startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOut::State	typeref:typename:float	access:public
+FadeOut::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOut::State	typeref:typename:bool	access:public
+FadeOutAndRemove	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim FadeOutAndRemove(T& shape, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float dur)
+FadeOutAndRemove::State::startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOutAndRemove::State	typeref:typename:float	access:public
+FadeOutAndRemove::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOutAndRemove::State	typeref:typename:bool	access:public
+FadeTo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim FadeTo(T& shape, float targetOp, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float targetOp,float dur)
+FadeTo::State::startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeTo::State	typeref:typename:float	access:public
+FadeTo::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeTo::State	typeref:typename:bool	access:public
+FontData	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    struct FontData$/;"	s	class:TextMngr	access:public
+Freeze	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Freeze()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+FromStoP	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^poi FromStoP(std::string sofpoints)$/;"	f	typeref:typename:poi	signature:(std::string sofpoints)
+FunctionGraph	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    FunctionGraph(Axis& xAx, Axis& yAx, std::function<float(float)> func,$/;"	f	class:FunctionGraph	access:public	signature:(Axis & xAx,Axis & yAx,std::function<float (float)> func,float stroke=0.02f,int samples=500)
+FunctionGraph	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class FunctionGraph : public Shape2D$/;"	c	inherits:Shape2D
+FunctionGraph::AddLine	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void AddLine(std::vector<float>& verts, float x1, float y1, float x2, float y2, float thickn/;"	f	class:FunctionGraph	typeref:typename:void	access:private	signature:(std::vector<float> & verts,float x1,float y1,float x2,float y2,float thickness)
+FunctionGraph::FunctionGraph	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    FunctionGraph(Axis& xAx, Axis& yAx, std::function<float(float)> func,$/;"	f	class:FunctionGraph	access:public	signature:(Axis & xAx,Axis & yAx,std::function<float (float)> func,float stroke=0.02f,int samples=500)
+GetLen	/devoloping/opengl/falling-ball.cpp	/^  float GetLen() const { return sqrt((x * x) + (y * y)); }$/;"	f	class:Vec2D	typeref:typename:float	file:	access:public	signature:() const
+GetStringSequence	/devoloping/done_stuff/Something/something_coming.cpp	/^std::string GetStringSequence(int a = 0)$/;"	f	typeref:typename:std::string	signature:(int a=0)
+GetTextHeight	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    float GetTextHeight(std::string fontName, float scale)$/;"	f	class:TextMngr	typeref:typename:float	access:public	signature:(std::string fontName,float scale)
+GetTextWidth	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    float GetTextWidth(std::string fontName, std::string text, float scale)$/;"	f	class:TextMngr	typeref:typename:float	access:public	signature:(std::string fontName,std::string text,float scale)
+GettingTheCount	/devoloping/done_stuff/Something/something_coming.cpp	/^int GettingTheCount(std::string string_to_n)$/;"	f	typeref:typename:int	signature:(std::string string_to_n)
+Gray	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Gray[3]       = {0.50f, 0.50f, 0.52f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Green	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Green[3]      = {0.25f, 0.70f, 0.35f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+GrowArrow2D	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim GrowArrow2D(Arrow2D& arrow, float dur)$/;"	f	typeref:typename:Anim	signature:(Arrow2D & arrow,float dur)
+GrowArrow2D::State::ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+GrowArrow2D::State::ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+GrowArrow2D::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:bool	access:public
+GrowArrow2D::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+GrowArrow2D::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+GrowArrow3D	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim GrowArrow3D(Arrow3D& arrow, float dur, int segments = 32)$/;"	f	typeref:typename:Anim	signature:(Arrow3D & arrow,float dur,int segments=32)
+GrowArrow3D::State::ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+GrowArrow3D::State::ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+GrowArrow3D::State::ez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+GrowArrow3D::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:bool	access:public
+GrowArrow3D::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+GrowArrow3D::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+GrowArrow3D::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+Icosahedron	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Icosahedron(float radius = 1.0f)$/;"	f	class:Icosahedron	access:public	signature:(float radius=1.0f)
+Icosahedron	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Icosahedron : public Shape3D$/;"	c	inherits:Shape3D
+Icosahedron::Icosahedron	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Icosahedron(float radius = 1.0f)$/;"	f	class:Icosahedron	access:public	signature:(float radius=1.0f)
+InBack	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InBack(float t) { float s = 1.70158f; return t * t * ((s + 1.0f) * t - s); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InBounce	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InBounce(float t) { return 1.0f - OutBounce(1.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InCubic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InCubic(float t) { return t * t * t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InElastic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InElastic(float t) { return 1.0f - OutElastic(1.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InExpo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InExpo(float t) { return t == 0.0f ? 0.0f : powf(2.0f, 10.0f * (t - 1.0f)); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InOutCubic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InOutCubic(float t) { return t < 0.5f ? 4.0f * t * t * t : (t - 1.0f) * (2.0f */;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InOutQuad	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InOutQuad(float t) { return t < 0.5f ? 2.0f * t * t : -1.0f + (4.0f - 2.0f * t)/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InQuad	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InQuad(float t) { return t * t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InQuart	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float InQuart(float t) { return t * t * t * t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+InitTextShader	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    void InitTextShader()$/;"	f	class:TextMngr	typeref:typename:void	access:public	signature:()
+IsDone	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    bool IsDone() { return elapsed >= duration; }$/;"	f	struct:Anim	typeref:typename:bool	access:public	signature:()
+IsOpen	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    bool IsOpen(std::string name)$/;"	f	class:WindowMngr	typeref:typename:bool	access:public	signature:(std::string name)
+Light	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Light()$/;"	f	class:Light	access:public	signature:()
+Light	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Light(float posX, float posY, float posZ)$/;"	f	class:Light	access:public	signature:(float posX,float posY,float posZ)
+Light	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Light : public Shape3D$/;"	c	inherits:Shape3D
+Light::Draw	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Draw() override$/;"	f	class:Light	typeref:typename:void	access:public	signature:()
+Light::Light	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Light()$/;"	f	class:Light	access:public	signature:()
+Light::Light	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Light(float posX, float posY, float posZ)$/;"	f	class:Light	access:public	signature:(float posX,float posY,float posZ)
+Light::SetBrightness	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetBrightness(float b)$/;"	f	class:Light	typeref:typename:void	access:public	signature:(float b)
+Light::SetRange	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetRange(float newRange)$/;"	f	class:Light	typeref:typename:void	access:public	signature:(float newRange)
+Light::brightness	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float brightness = 1.0f;$/;"	m	class:Light	typeref:typename:float	access:public
+Light::range	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float range = 10.0f;$/;"	m	class:Light	typeref:typename:float	access:public
+Line	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Line(float startX, float startY, float endX, float endY)$/;"	f	class:Line	access:public	signature:(float startX,float startY,float endX,float endY)
+Line	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Line : public Shape2D$/;"	c	inherits:Shape2D
+Line::Line	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Line(float startX, float startY, float endX, float endY)$/;"	f	class:Line	access:public	signature:(float startX,float startY,float endX,float endY)
+Linear	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float Linear(float t) { return t; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+LinkShaders	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    unsigned int LinkShaders(unsigned int vertex_shader, unsigned int fragment_shader)$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:(unsigned int vertex_shader,unsigned int fragment_shader)
+LoadFont	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    bool LoadFont(std::string name, const char* path, int size)$/;"	f	class:TextMngr	typeref:typename:bool	access:public	signature:(std::string name,const char * path,int size)
+Magenta	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Magenta[3]    = {0.80f, 0.25f, 0.60f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Manage	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Manage()$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:()
+Math	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float Math(float worldVal) { return worldVal \/ unitSize; }$/;"	f	class:Axis	typeref:typename:float	access:public	signature:(float worldVal)
+MoveArrow2DBoth	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim MoveArrow2DBoth(Arrow2D& arrow, float tsx, float tsy, float tex, float tey, float du/;"	f	typeref:typename:Anim	signature:(Arrow2D & arrow,float tsx,float tsy,float tex,float tey,float dur)
+MoveArrow2DBoth::State::sex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+MoveArrow2DBoth::State::sey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+MoveArrow2DBoth::State::ssx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+MoveArrow2DBoth::State::ssy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+MoveArrow2DBoth::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:bool	access:public
+MoveArrow2DEnd	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim MoveArrow2DEnd(Arrow2D& arrow, float tx, float ty, float dur)$/;"	f	typeref:typename:Anim	signature:(Arrow2D & arrow,float tx,float ty,float dur)
+MoveArrow2DEnd::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DEnd::State	typeref:typename:bool	access:public
+MoveArrow2DEnd::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DEnd::State	typeref:typename:float	access:public
+MoveArrow2DEnd::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DEnd::State	typeref:typename:float	access:public
+MoveArrow2DStart	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim MoveArrow2DStart(Arrow2D& arrow, float tx, float ty, float dur)$/;"	f	typeref:typename:Anim	signature:(Arrow2D & arrow,float tx,float ty,float dur)
+MoveArrow2DStart::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DStart::State	typeref:typename:bool	access:public
+MoveArrow2DStart::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DStart::State	typeref:typename:float	access:public
+MoveArrow2DStart::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DStart::State	typeref:typename:float	access:public
+MoveArrow3DBoth	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim MoveArrow3DBoth(Arrow3D& arrow, float tsx, float tsy, float tsz, float tex, float te/;"	f	typeref:typename:Anim	signature:(Arrow3D & arrow,float tsx,float tsy,float tsz,float tex,float tey,float tez,float dur,int segments=32)
+MoveArrow3DBoth::State::sex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+MoveArrow3DBoth::State::sey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+MoveArrow3DBoth::State::sez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+MoveArrow3DBoth::State::ssx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+MoveArrow3DBoth::State::ssy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+MoveArrow3DBoth::State::ssz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+MoveArrow3DBoth::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:bool	access:public
+MoveArrow3DEnd	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim MoveArrow3DEnd(Arrow3D& arrow, float tx, float ty, float tz, float dur, int segments/;"	f	typeref:typename:Anim	signature:(Arrow3D & arrow,float tx,float ty,float tz,float dur,int segments=32)
+MoveArrow3DEnd::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:bool	access:public
+MoveArrow3DEnd::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:float	access:public
+MoveArrow3DEnd::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:float	access:public
+MoveArrow3DEnd::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:float	access:public
+MoveArrow3DStart	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim MoveArrow3DStart(Arrow3D& arrow, float tx, float ty, float tz, float dur, int segmen/;"	f	typeref:typename:Anim	signature:(Arrow3D & arrow,float tx,float ty,float tz,float dur,int segments=32)
+MoveArrow3DStart::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:bool	access:public
+MoveArrow3DStart::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:float	access:public
+MoveArrow3DStart::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:float	access:public
+MoveArrow3DStart::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:float	access:public
+MoveBy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim MoveBy(T& shape, float dx, float dy, float dz, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float dx,float dy,float dz,float dur)
+MoveBy::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:bool	access:public
+MoveBy::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:float	access:public
+MoveBy::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:float	access:public
+MoveBy::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:float	access:public
+MoveCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void MoveCamera(float forward, float right, float up)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float forward,float right,float up)
+MoveTo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim MoveTo(T& shape, float tx, float ty, float tz, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float tx,float ty,float tz,float dur)
+MoveTo::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:bool	access:public
+MoveTo::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:float	access:public
+MoveTo::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:float	access:public
+MoveTo::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:float	access:public
+Normalize	/devoloping/opengl/falling-ball.cpp	/^  Vec2D Normalize(Vec2D vector) {$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(Vec2D vector)
+Normalized	/devoloping/opengl/falling-ball.cpp	/^  Vec2D Normalized() const {$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:() const
+OBJECTS_HPP	/devoloping/phyco/src_for_phyco/Objects.hpp	/^#define OBJECTS_HPP$/;"	d
+Orange	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Orange[3]     = {0.90f, 0.50f, 0.15f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+OrbitCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void OrbitCamera(float yawDelta, float pitchDelta)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float yawDelta,float pitchDelta)
+OutBack	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutBack(float t) { float s = 1.70158f; t -= 1.0f; return t * t * ((s + 1.0f) * /;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+OutBounce	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutBounce(float t)$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+OutCubic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutCubic(float t) { float u = t - 1.0f; return u * u * u + 1.0f; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+OutElastic	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutElastic(float t)$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+OutExpo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutExpo(float t) { return t == 1.0f ? 1.0f : 1.0f - powf(2.0f, -10.0f * t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+OutQuad	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutQuad(float t) { return t * (2.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+OutQuart	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float OutQuart(float t) { float u = t - 1.0f; return 1.0f - u * u * u * u; }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+PHFW	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^class PHFW$/;"	c
+PHFW::Add	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Add(Light& light) { lights.push_back(&light); Shapes3DOnScreen.push_back(&light); }$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Light & light)
+PHFW::Add	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Add(Shape2D& shape) { Shapes2DOnScreen.push_back(&shape); }$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape2D & shape)
+PHFW::Add	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Add(Shape3D& shape) { Shapes3DOnScreen.push_back(&shape); }$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape3D & shape)
+PHFW::CleanUp	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void CleanUp()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+PHFW::Freeze	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Freeze()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+PHFW::MoveCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void MoveCamera(float forward, float right, float up)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float forward,float right,float up)
+PHFW::OrbitCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void OrbitCamera(float yawDelta, float pitchDelta)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float yawDelta,float pitchDelta)
+PHFW::PanCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void PanCamera(float dx, float dy)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float dx,float dy)
+PHFW::Play	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Play(Anim anim)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Anim anim)
+PHFW::PlayTogether	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void PlayTogether(std::initializer_list<Anim> animations)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(std::initializer_list<Anim> animations)
+PHFW::Remove	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Remove(Shape2D& shape)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape2D & shape)
+PHFW::Remove	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^void Remove(Light& light)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Light & light)
+PHFW::Remove	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^void Remove(Shape3D& shape)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape3D & shape)
+PHFW::RenderFrame	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void RenderFrame()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+PHFW::RotateCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void RotateCamera(float yawDelta)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float yawDelta)
+PHFW::Run	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Run()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+PHFW::SetBackGroundColor	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetBackGroundColor(const float color[3]) { bgR = color[0]; bgG = color[1]; bgB = color[/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(const float color[3])
+PHFW::SetBackGroundColor	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetBackGroundColor(float red, float green, float blue) { bgR = red; bgG = green; bgB = /;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float red,float green,float blue)
+PHFW::SetCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetCamera(float x, float y, float z)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float x,float y,float z)
+PHFW::SetCameraTarget	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetCameraTarget(float x, float y, float z)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float x,float y,float z)
+PHFW::Shapes2DOnScreen	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::vector<Shape2D*> Shapes2DOnScreen;$/;"	m	class:PHFW	typeref:typename:std::vector<Shape2D * >	access:public
+PHFW::Shapes3DOnScreen	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::vector<Shape3D*> Shapes3DOnScreen;$/;"	m	class:PHFW	typeref:typename:std::vector<Shape3D * >	access:public
+PHFW::Start	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Start(std::string name, int width, int height, const char* title)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(std::string name,int width,int height,const char * title)
+PHFW::TiltCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void TiltCamera(float pitchDelta)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float pitchDelta)
+PHFW::Wait	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Wait(float seconds)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float seconds)
+PHFW::ZoomCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void ZoomCamera(float amount)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float amount)
+PHFW::activeWindow	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::string activeWindow;$/;"	m	class:PHFW	typeref:typename:std::string	access:public
+PHFW::bgB	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float bgR = 0.0f, bgG = 0.0f, bgB = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::bgG	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float bgR = 0.0f, bgG = 0.0f, bgB = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::bgR	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float bgR = 0.0f, bgG = 0.0f, bgB = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::cameraDistance	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float cameraDistance = 4.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::cameraFront	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraFront  = glm::vec3(0.0f, 0.0f, -1.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+PHFW::cameraPitch	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float cameraPitch = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::cameraPos	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraPos    = glm::vec3(0.0f, 1.0f, 4.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+PHFW::cameraTarget	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+PHFW::cameraUp	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraUp     = glm::vec3(0.0f, 1.0f, 0.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+PHFW::cameraYaw	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float cameraYaw   = -90.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::dt	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float dt;$/;"	m	class:PHFW	typeref:typename:float	access:public
+PHFW::lights	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::vector<Light*> lights;$/;"	m	class:PHFW	typeref:typename:std::vector<Light * >	access:public
+PHFW::winHeight	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    int winWidth, winHeight;$/;"	m	class:PHFW	typeref:typename:int	access:public
+PHFW::winWidth	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    int winWidth, winHeight;$/;"	m	class:PHFW	typeref:typename:int	access:public
+PHYCO_HPP	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^#define PHYCO_HPP$/;"	d
+PI	/devoloping/phyco/src_for_phyco/Objects.hpp	/^const float PI = 3.14159265359f;$/;"	v	typeref:typename:const float
+PanCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void PanCamera(float dx, float dy)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float dx,float dy)
+Phyco	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^PHFW Phyco;$/;"	v	typeref:typename:PHFW
+Plane	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Plane()$/;"	f	class:Plane	access:public	signature:()
+Plane	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Plane : public Shape3D$/;"	c	inherits:Shape3D
+Plane::Plane	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Plane()$/;"	f	class:Plane	access:public	signature:()
+Play	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Play(Anim anim)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Anim anim)
+PlayTogether	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void PlayTogether(std::initializer_list<Anim> animations)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(std::initializer_list<Anim> animations)
+Point	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Point()$/;"	f	class:Point	access:public	signature:()
+Point	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Point : public Shape2D$/;"	c	inherits:Shape2D
+Point::Point	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Point()$/;"	f	class:Point	access:public	signature:()
+Prism	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Prism(float height = 1.0f, float size = 1.0f)$/;"	f	class:Prism	access:public	signature:(float height=1.0f,float size=1.0f)
+Prism	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Prism : public Shape3D$/;"	c	inherits:Shape3D
+Prism::Prism	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Prism(float height = 1.0f, float size = 1.0f)$/;"	f	class:Prism	access:public	signature:(float height=1.0f,float size=1.0f)
+Purple	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Purple[3]     = {0.60f, 0.30f, 0.80f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Pyramid	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Pyramid(float size = 1.0f)$/;"	f	class:Pyramid	access:public	signature:(float size=1.0f)
+Pyramid	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Pyramid : public Shape3D$/;"	c	inherits:Shape3D
+Pyramid::Pyramid	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Pyramid(float size = 1.0f)$/;"	f	class:Pyramid	access:public	signature:(float size=1.0f)
+Rebuild	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Rebuild()$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:()
+Rebuild	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Rebuild()$/;"	f	class:Axis	typeref:typename:void	access:public	signature:()
+Rebuild	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Rebuild(int segments = 32)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(int segments=32)
+Rectangle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Rectangle(float w, float h)$/;"	f	class:Rectangle	access:public	signature:(float w,float h)
+Rectangle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Rectangle : public Shape2D$/;"	c	inherits:Shape2D
+Rectangle::Rectangle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Rectangle(float w, float h)$/;"	f	class:Rectangle	access:public	signature:(float w,float h)
+Red	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Red[3]        = {0.85f, 0.25f, 0.25f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+RegularPolygon	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    RegularPolygon(float radius, int sides)$/;"	f	class:RegularPolygon	access:public	signature:(float radius,int sides)
+RegularPolygon	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class RegularPolygon : public Shape2D$/;"	c	inherits:Shape2D
+RegularPolygon::RegularPolygon	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    RegularPolygon(float radius, int sides)$/;"	f	class:RegularPolygon	access:public	signature:(float radius,int sides)
+Remove	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Remove(Shape2D& shape)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape2D & shape)
+Remove	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^void Remove(Light& light)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Light & light)
+Remove	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^void Remove(Shape3D& shape)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(Shape3D & shape)
+RenderFrame	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void RenderFrame()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+RotateBy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim RotateBy(T& shape, float drx, float dry, float drz, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float drx,float dry,float drz,float dur)
+RotateBy::State::srx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:float	access:public
+RotateBy::State::sry	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:float	access:public
+RotateBy::State::srz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:float	access:public
+RotateBy::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:bool	access:public
+RotateCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void RotateCamera(float yawDelta)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float yawDelta)
+RotateTo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim RotateTo(T& shape, float trx, float try_, float trz, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float trx,float try_,float trz,float dur)
+RotateTo::State::srx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:float	access:public
+RotateTo::State::sry	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:float	access:public
+RotateTo::State::srz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:float	access:public
+RotateTo::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:bool	access:public
+Run	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Run()$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:()
+RushFrom	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float RushFrom(float t) { return 1.0f - RushInto(1.0f - t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+RushInto	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float RushInto(float t) { return 2.0f * t * t \/ (1.0f + t * t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+SHADER_MANAGER_HPP	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^#define SHADER_MANAGER_HPP$/;"	d
+ScaleOutAndRemove	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim ScaleOutAndRemove(T& shape, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float dur)
+ScaleOutAndRemove::State::startScale	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleOutAndRemove::State	typeref:typename:float	access:public
+ScaleOutAndRemove::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleOutAndRemove::State	typeref:typename:bool	access:public
+ScaleTo	/devoloping/phyco/src_for_phyco/Animations.hpp	/^Anim ScaleTo(T& shape, float target, float dur)$/;"	f	typeref:typename:Anim	signature:(T & shape,float target,float dur)
+ScaleTo::State::startScale	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleTo::State	typeref:typename:float	access:public
+ScaleTo::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleTo::State	typeref:typename:bool	access:public
+SetBackGroundColor	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetBackGroundColor(const float color[3]) { bgR = color[0]; bgG = color[1]; bgB = color[/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(const float color[3])
+SetBackGroundColor	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetBackGroundColor(float red, float green, float blue) { bgR = red; bgG = green; bgB = /;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float red,float green,float blue)
+SetBrightness	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetBrightness(float b)$/;"	f	class:Light	typeref:typename:void	access:public	signature:(float b)
+SetCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetCamera(float x, float y, float z)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float x,float y,float z)
+SetCameraTarget	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void SetCameraTarget(float x, float y, float z)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float x,float y,float z)
+SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(const float color[3], float alpha = 1.0f)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(const float color[3],float alpha=1.0f)
+SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(const float color[3], float alpha = 1.0f)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(const float color[3],float alpha=1.0f)
+SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(float red, float green, float blue, float alpha = 1.0f)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float red,float green,float blue,float alpha=1.0f)
+SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(float red, float green, float blue, float alpha = 1.0f)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float red,float green,float blue,float alpha=1.0f)
+SetEase	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    Anim& SetEase(std::function<float(float)> e)$/;"	f	struct:Anim	typeref:typename:Anim &	access:public	signature:(std::function<float (float)> e)
+SetEnd	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetEnd(float ex, float ey)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float ex,float ey)
+SetEnd	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetEnd(float ex, float ey, float ez)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float ex,float ey,float ez)
+SetFloat	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetFloat(std::string name, const char* uniform, float value)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float value)
+SetHeadLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadLength(float length)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float length)
+SetHeadLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadLength(float length)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float length)
+SetHeadRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadRadius(float radius)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float radius)
+SetHeadWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetHeadWidth(float width)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float width)
+SetInt	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetInt(std::string name, const char* uniform, int value)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,int value)
+SetMat4	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetMat4(std::string name, const char* uniform, glm::mat4 matrix)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,glm::mat4 matrix)
+SetPosition	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetPosition(float x_cor, float y_cor, float z_cor)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float x_cor,float y_cor,float z_cor)
+SetPosition	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetPosition(float x_cor, float y_cor, float z_cor)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float x_cor,float y_cor,float z_cor)
+SetRange	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetRange(float newRange)$/;"	f	class:Light	typeref:typename:void	access:public	signature:(float newRange)
+SetScale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetScale(float s)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float s)
+SetScale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetScale(float s)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float s)
+SetShaftRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetShaftRadius(float radius)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float radius)
+SetStart	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetStart(float sx, float sy)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float sx,float sy)
+SetStart	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetStart(float sx, float sy, float sz)$/;"	f	class:Arrow3D	typeref:typename:void	access:public	signature:(float sx,float sy,float sz)
+SetStrokeWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetStrokeWidth(float width)$/;"	f	class:Arrow2D	typeref:typename:void	access:public	signature:(float width)
+SetVec2	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetVec2(std::string name, const char* uniform, float x, float y)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float x,float y)
+SetVec3	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetVec3(std::string name, const char* uniform, float x, float y, float z)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float x,float y,float z)
+SetVec4	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetVec4(std::string name, const char* uniform, float x, float y, float z, float w)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float x,float y,float z,float w)
+ShaderManager	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^ShaderMngr ShaderManager;$/;"	v	typeref:typename:ShaderMngr
+ShaderMngr	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^class ShaderMngr$/;"	c
+ShaderMngr::Compile	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    unsigned int Compile(const char* source, GLenum type)$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:(const char * source,GLenum type)
+ShaderMngr::CreateShaderFromString	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    unsigned int CreateShaderFromString(std::string name, const char* vertex_shader, const char*/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:(std::string name,const char * vertex_shader,const char * fragment_shader)
+ShaderMngr::DeleteAllShader	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void DeleteAllShader()$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:()
+ShaderMngr::DeleteShader	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void DeleteShader(std::string name)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name)
+ShaderMngr::LinkShaders	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    unsigned int LinkShaders(unsigned int vertex_shader, unsigned int fragment_shader)$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:(unsigned int vertex_shader,unsigned int fragment_shader)
+ShaderMngr::SetFloat	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetFloat(std::string name, const char* uniform, float value)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float value)
+ShaderMngr::SetInt	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetInt(std::string name, const char* uniform, int value)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,int value)
+ShaderMngr::SetMat4	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetMat4(std::string name, const char* uniform, glm::mat4 matrix)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,glm::mat4 matrix)
+ShaderMngr::SetVec2	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetVec2(std::string name, const char* uniform, float x, float y)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float x,float y)
+ShaderMngr::SetVec3	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetVec3(std::string name, const char* uniform, float x, float y, float z)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float x,float y,float z)
+ShaderMngr::SetVec4	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void SetVec4(std::string name, const char* uniform, float x, float y, float z, float w)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name,const char * uniform,float x,float y,float z,float w)
+ShaderMngr::UseDefaultShader	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^unsigned int UseDefaultShader()$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:()
+ShaderMngr::UseDefaultShader2D	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^unsigned int UseDefaultShader2D()$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:()
+ShaderMngr::UseProgram	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void UseProgram(std::string name)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name)
+ShaderMngr::shaders	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    std::map<std::string, unsigned int> shaders;$/;"	m	class:ShaderMngr	typeref:typename:std::map<std::string,unsigned int>	access:public
+Shape2D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Shape2D$/;"	c
+Shape2D::AddUpdater	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void AddUpdater(std::function<void(float)> updater)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(std::function<void (float)> updater)
+Shape2D::Delete	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Delete()$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:()
+Shape2D::Draw	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Draw()$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:()
+Shape2D::SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(const float color[3], float alpha = 1.0f)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(const float color[3],float alpha=1.0f)
+Shape2D::SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(float red, float green, float blue, float alpha = 1.0f)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float red,float green,float blue,float alpha=1.0f)
+Shape2D::SetPosition	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetPosition(float x_cor, float y_cor, float z_cor)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float x_cor,float y_cor,float z_cor)
+Shape2D::SetScale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetScale(float s)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float s)
+Shape2D::UpdateLogic	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void UpdateLogic(float dt)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float dt)
+Shape2D::UpdateVertices	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void UpdateVertices(float* new_vertices, int totalfloats)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float * new_vertices,int totalfloats)
+Shape2D::Upload	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Upload(float* vertices, int totalfloats)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float * vertices,int totalfloats)
+Shape2D::VAO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO;$/;"	m	class:Shape2D	typeref:typename:unsigned int	access:public
+Shape2D::VBO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VBO;$/;"	m	class:Shape2D	typeref:typename:unsigned int	access:public
+Shape2D::b	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::drawMode	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int drawMode = GL_TRIANGLES; $/;"	m	class:Shape2D	typeref:typename:unsigned int	access:public
+Shape2D::g	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::opacity	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float opacity = 1.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::r	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::rx	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rx = 0.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::ry	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float ry = 0.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::rz	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rz = 0.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::scale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float scale = 1.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::shaderName	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::string shaderName = "DefaultShader2D";$/;"	m	class:Shape2D	typeref:typename:std::string	access:public
+Shape2D::updaters	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::vector<std::function<void(float)>> updaters;$/;"	m	class:Shape2D	typeref:typename:std::vector<std::function<void (float)>>	access:public
+Shape2D::vertexcount	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    int vertexcount;$/;"	m	class:Shape2D	typeref:typename:int	access:public
+Shape2D::x	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::y	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape2D::z	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+Shape3D	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Shape3D$/;"	c
+Shape3D::AddUpdater	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void AddUpdater(std::function<void(float)> updater)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(std::function<void (float)> updater)
+Shape3D::Delete	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Delete()$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:()
+Shape3D::Draw	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    virtual void Draw()$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:()
+Shape3D::EBO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO, VBO, EBO; \/\/ Reforged to use an Element Buffer Object for indexing$/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+Shape3D::SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(const float color[3], float alpha = 1.0f)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(const float color[3],float alpha=1.0f)
+Shape3D::SetColor	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetColor(float red, float green, float blue, float alpha = 1.0f)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float red,float green,float blue,float alpha=1.0f)
+Shape3D::SetPosition	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetPosition(float x_cor, float y_cor, float z_cor)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float x_cor,float y_cor,float z_cor)
+Shape3D::SetScale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void SetScale(float s)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float s)
+Shape3D::UpdateLogic	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void UpdateLogic(float dt)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float dt)
+Shape3D::Upload	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Upload(const std::vector<float>& vertices, const std::vector<unsigned int>& indices)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(const std::vector<float> & vertices,const std::vector<unsigned int> & indices)
+Shape3D::VAO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO, VBO, EBO; \/\/ Reforged to use an Element Buffer Object for indexing$/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+Shape3D::VBO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO, VBO, EBO; \/\/ Reforged to use an Element Buffer Object for indexing$/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+Shape3D::b	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::drawMode	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int drawMode = GL_TRIANGLES; $/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+Shape3D::g	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::indexCount	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    int indexCount; \/\/ The EBO tells us how many total triangles to draw, not glDrawArrays(0, /;"	m	class:Shape3D	typeref:typename:int	access:public
+Shape3D::opacity	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float opacity = 1.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::r	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::rx	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rx = 0.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::ry	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float ry = 0.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::rz	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rz = 0.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::scale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float scale = 1.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::shaderName	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::string shaderName = "DefaultShader";$/;"	m	class:Shape3D	typeref:typename:std::string	access:public
+Shape3D::updaters	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::vector<std::function<void(float)>> updaters;$/;"	m	class:Shape3D	typeref:typename:std::vector<std::function<void (float)>>	access:public
+Shape3D::x	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::y	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shape3D::z	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+Shapes2DOnScreen	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::vector<Shape2D*> Shapes2DOnScreen;$/;"	m	class:PHFW	typeref:typename:std::vector<Shape2D * >	access:public
+Shapes3DOnScreen	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::vector<Shape3D*> Shapes3DOnScreen;$/;"	m	class:PHFW	typeref:typename:std::vector<Shape3D * >	access:public
+ShrinkArrow2D	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	f	typeref:typename:Anim	signature:(Arrow2D & arrow,float dur)
+ShrinkArrow2D::State::ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+ShrinkArrow2D::State::ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+ShrinkArrow2D::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:bool	access:public
+ShrinkArrow2D::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+ShrinkArrow2D::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+ShrinkArrow2DAndRemove	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2DAndRemove(Arrow2D& arrow, float dur)$/;"	f	typeref:typename:Anim	signature:(Arrow2D & arrow,float dur)
+ShrinkArrow2DAndRemove::State::ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow2DAndRemove::State::ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow2DAndRemove::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:bool	access:public
+ShrinkArrow2DAndRemove::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow2DAndRemove::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow3D	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	f	typeref:typename:Anim	signature:(Arrow3D & arrow,float dur,int segments=32)
+ShrinkArrow3D::State::ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ShrinkArrow3D::State::ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ShrinkArrow3D::State::ez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ShrinkArrow3D::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:bool	access:public
+ShrinkArrow3D::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ShrinkArrow3D::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ShrinkArrow3D::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ShrinkArrow3DAndRemove	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3DAndRemove(Arrow3D& arrow, float dur, int segments = 32)$/;"	f	typeref:typename:Anim	signature:(Arrow3D & arrow,float dur,int segments=32)
+ShrinkArrow3DAndRemove::State::ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow3DAndRemove::State::ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow3DAndRemove::State::ez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow3DAndRemove::State::started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:bool	access:public
+ShrinkArrow3DAndRemove::State::sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow3DAndRemove::State::sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ShrinkArrow3DAndRemove::State::sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+Smooth	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float Smooth(float t) { return t * t * (3.0f - 2.0f * t); }$/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+Sphere	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Sphere(float radius = 0.5f, int slices = 32, int stacks = 32)$/;"	f	class:Sphere	access:public	signature:(float radius=0.5f,int slices=32,int stacks=32)
+Sphere	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Sphere : public Shape3D$/;"	c	inherits:Shape3D
+Sphere::Sphere	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Sphere(float radius = 0.5f, int slices = 32, int stacks = 32)$/;"	f	class:Sphere	access:public	signature:(float radius=0.5f,int slices=32,int stacks=32)
+Star	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Star(float innerRadius, float outerRadius, int points)$/;"	f	class:Star	access:public	signature:(float innerRadius,float outerRadius,int points)
+Star	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Star : public Shape2D$/;"	c	inherits:Shape2D
+Star::Star	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Star(float innerRadius, float outerRadius, int points)$/;"	f	class:Star	access:public	signature:(float innerRadius,float outerRadius,int points)
+Start	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Start(std::string name, int width, int height, const char* title)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(std::string name,int width,int height,const char * title)
+Start	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    void Start()$/;"	f	class:TextMngr	typeref:typename:void	access:public	signature:()
+Start	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Start()$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:()
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	s	function:GrowArrow3D
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	s	function:ShrinkArrow3DAndRemove
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	s	function:GrowArrow2D
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	s	function:ShrinkArrow2DAndRemove
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	s	function:ColorTo
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	s	function:RotateBy
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	s	function:RotateTo
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	s	function:MoveArrow2DBoth
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	s	function:MoveArrow3DBoth
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	s	function:FadeIn
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	s	function:FadeOut
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	s	function:FadeOutAndRemove
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	s	function:FadeTo
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	s	function:ScaleOutAndRemove
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	s	function:ScaleTo
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	s	function:MoveArrow3DEnd
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	s	function:MoveArrow3DStart
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	s	function:MoveBy
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	s	function:MoveTo
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	s	function:MoveArrow2DEnd
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	s	function:MoveArrow2DStart
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	s	function:ShrinkArrow2D
+State	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	s	function:ShrinkArrow3D
+Stop	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Stop()$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:()
+StopWindow	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void StopWindow(std::string name)$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:(std::string name)
+TEXT_MANAGER_HPP	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^#define TEXT_MANAGER_HPP$/;"	d
+TakeHints	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    int TakeHints(int major_ver = 3, int minor_ver = 3, int profile = core, int samples = 4)$/;"	f	class:WindowMngr	typeref:typename:int	access:public	signature:(int major_ver=3,int minor_ver=3,int profile=core,int samples=4)
+TextManager	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^TextMngr TextManager;$/;"	v	typeref:typename:TextMngr
+TextMngr	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^class TextMngr$/;"	c
+TextMngr::FontData	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    struct FontData$/;"	s	class:TextMngr	access:public
+TextMngr::FontData::fontSize	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^        int fontSize;$/;"	m	struct:TextMngr::FontData	typeref:typename:int	access:public
+TextMngr::FontData::glyphs	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^        std::map<char, CharGlyph> glyphs;$/;"	m	struct:TextMngr::FontData	typeref:typename:std::map<char,CharGlyph>	access:public
+TextMngr::GetTextHeight	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    float GetTextHeight(std::string fontName, float scale)$/;"	f	class:TextMngr	typeref:typename:float	access:public	signature:(std::string fontName,float scale)
+TextMngr::GetTextWidth	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    float GetTextWidth(std::string fontName, std::string text, float scale)$/;"	f	class:TextMngr	typeref:typename:float	access:public	signature:(std::string fontName,std::string text,float scale)
+TextMngr::InitTextShader	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    void InitTextShader()$/;"	f	class:TextMngr	typeref:typename:void	access:public	signature:()
+TextMngr::LoadFont	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    bool LoadFont(std::string name, const char* path, int size)$/;"	f	class:TextMngr	typeref:typename:bool	access:public	signature:(std::string name,const char * path,int size)
+TextMngr::Start	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    void Start()$/;"	f	class:TextMngr	typeref:typename:void	access:public	signature:()
+TextMngr::fonts	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    std::map<std::string, FontData> fonts;$/;"	m	class:TextMngr	typeref:typename:std::map<std::string,FontData>	access:public
+TextMngr::ft	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    FT_Library ft;$/;"	m	class:TextMngr	typeref:typename:FT_Library	access:public
+TextMngr::ftReady	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    bool ftReady = false;$/;"	m	class:TextMngr	typeref:typename:bool	access:public
+TextMngr::textVAO	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    unsigned int textVAO = 0, textVBO = 0;$/;"	m	class:TextMngr	typeref:typename:unsigned int	access:public
+TextMngr::textVBO	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    unsigned int textVAO = 0, textVBO = 0;$/;"	m	class:TextMngr	typeref:typename:unsigned int	access:public
+TextMngr::vaoReady	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    bool vaoReady = false;$/;"	m	class:TextMngr	typeref:typename:bool	access:public
+ThereAndBack	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    inline float ThereAndBack(float t) { return t < 0.5f ? Smooth(2.0f * t) : Smooth(2.0f * (1.0/;"	f	namespace:Ease	typeref:typename:float	signature:(float t)
+TiltCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void TiltCamera(float pitchDelta)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float pitchDelta)
+Torus	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Torus(float outerRadius = 0.5f, float innerRadius = 0.2f, int radialSegments = 64, int tubul/;"	f	class:Torus	access:public	signature:(float outerRadius=0.5f,float innerRadius=0.2f,int radialSegments=64,int tubularSegments=64)
+Torus	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Torus : public Shape3D$/;"	c	inherits:Shape3D
+Torus::Torus	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Torus(float outerRadius = 0.5f, float innerRadius = 0.2f, int radialSegments = 64, int tubul/;"	f	class:Torus	access:public	signature:(float outerRadius=0.5f,float innerRadius=0.2f,int radialSegments=64,int tubularSegments=64)
+Triangle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Triangle(float size)$/;"	f	class:Triangle	access:public	signature:(float size)
+Triangle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^class Triangle : public Shape2D$/;"	c	inherits:Shape2D
+Triangle::Triangle	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Triangle(float size)$/;"	f	class:Triangle	access:public	signature:(float size)
+Triangle::sizeLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float sizeLength;$/;"	m	class:Triangle	typeref:typename:float	access:public
+Update	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    void Update(float dt)$/;"	f	struct:Anim	typeref:typename:void	access:public	signature:(float dt)
+Update	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Update(std::string name)$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:(std::string name)
+UpdateLogic	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void UpdateLogic(float dt)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float dt)
+UpdateLogic	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void UpdateLogic(float dt)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(float dt)
+UpdateVertices	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void UpdateVertices(float* new_vertices, int totalfloats)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float * new_vertices,int totalfloats)
+Upload	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Upload(const std::vector<float>& vertices, const std::vector<unsigned int>& indices)$/;"	f	class:Shape3D	typeref:typename:void	access:public	signature:(const std::vector<float> & vertices,const std::vector<unsigned int> & indices)
+Upload	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    void Upload(float* vertices, int totalfloats)$/;"	f	class:Shape2D	typeref:typename:void	access:public	signature:(float * vertices,int totalfloats)
+UseDefaultShader	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^unsigned int UseDefaultShader()$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:()
+UseDefaultShader2D	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^unsigned int UseDefaultShader2D()$/;"	f	class:ShaderMngr	typeref:typename:unsigned int	access:public	signature:()
+UseProgram	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    void UseProgram(std::string name)$/;"	f	class:ShaderMngr	typeref:typename:void	access:public	signature:(std::string name)
+UseWindow	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void UseWindow(std::string name)$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:(std::string name)
+VAO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO, VBO, EBO; \/\/ Reforged to use an Element Buffer Object for indexing$/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+VAO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO;$/;"	m	class:Shape2D	typeref:typename:unsigned int	access:public
+VBO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VAO, VBO, EBO; \/\/ Reforged to use an Element Buffer Object for indexing$/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+VBO	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int VBO;$/;"	m	class:Shape2D	typeref:typename:unsigned int	access:public
+Vec2D	/devoloping/opengl/falling-ball.cpp	/^  Vec2D() : x(0.0f), y(0.0f) {}$/;"	f	class:Vec2D	file:	access:public	signature:()
+Vec2D	/devoloping/opengl/falling-ball.cpp	/^  Vec2D(float x, float y) : x(x), y(y) {}$/;"	f	class:Vec2D	file:	access:public	signature:(float x,float y)
+Vec2D	/devoloping/opengl/falling-ball.cpp	/^class Vec2D {$/;"	c	file:
+Vec2D::GetLen	/devoloping/opengl/falling-ball.cpp	/^  float GetLen() const { return sqrt((x * x) + (y * y)); }$/;"	f	class:Vec2D	typeref:typename:float	file:	access:public	signature:() const
+Vec2D::Normalize	/devoloping/opengl/falling-ball.cpp	/^  Vec2D Normalize(Vec2D vector) {$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(Vec2D vector)
+Vec2D::Normalized	/devoloping/opengl/falling-ball.cpp	/^  Vec2D Normalized() const {$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:() const
+Vec2D::Vec2D	/devoloping/opengl/falling-ball.cpp	/^  Vec2D() : x(0.0f), y(0.0f) {}$/;"	f	class:Vec2D	file:	access:public	signature:()
+Vec2D::Vec2D	/devoloping/opengl/falling-ball.cpp	/^  Vec2D(float x, float y) : x(x), y(y) {}$/;"	f	class:Vec2D	file:	access:public	signature:(float x,float y)
+Vec2D::operator *	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator*(float s) const { return Vec2D(s * x, s * y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(float s) const
+Vec2D::operator +	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator+(const Vec2D &v) const { return Vec2D(x + v.x, y + v.y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(const Vec2D & v) const
+Vec2D::operator -	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator-() const { return Vec2D(-x, -y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:() const
+Vec2D::operator -	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator-(const Vec2D &v) const { return Vec2D(x - v.x, y - v.y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(const Vec2D & v) const
+Vec2D::operator /	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator\/(float s) const {$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(float s) const
+Vec2D::perp	/devoloping/opengl/falling-ball.cpp	/^  Vec2D perp() const { return Vec2D(-y, x); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:() const
+Vec2D::x	/devoloping/opengl/falling-ball.cpp	/^  float x;$/;"	m	class:Vec2D	typeref:typename:float	file:	access:public
+Vec2D::y	/devoloping/opengl/falling-ball.cpp	/^  float y;$/;"	m	class:Vec2D	typeref:typename:float	file:	access:public
+Vertex	/devoloping/shit_i_forget/test.cpp	/^struct Vertex {$/;"	s	file:
+Vertex::a	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+Vertex::b	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+Vertex::g	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+Vertex::r	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+Vertex::size	/devoloping/shit_i_forget/test.cpp	/^    float size;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+Vertex::x	/devoloping/shit_i_forget/test.cpp	/^    float x, y;    \/\/ NDC\/normalized device coordinate pixels$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+Vertex::y	/devoloping/shit_i_forget/test.cpp	/^    float x, y;    \/\/ NDC\/normalized device coordinate pixels$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+WINDOW_MANAGER_HPP	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^#define WINDOW_MANAGER_HPP$/;"	d
+Wait	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void Wait(float seconds)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float seconds)
+White	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float White[3]      = {0.92f, 0.92f, 0.92f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+WindowManager	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^WindowMngr WindowManager;$/;"	v	typeref:typename:WindowMngr
+WindowMngr	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^class WindowMngr$/;"	c
+WindowMngr::CreateWindow	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    GLFWwindow* CreateWindow(std::string name, int width, int height, const char* title)$/;"	f	class:WindowMngr	typeref:typename:GLFWwindow *	access:public	signature:(std::string name,int width,int height,const char * title)
+WindowMngr::IsOpen	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    bool IsOpen(std::string name)$/;"	f	class:WindowMngr	typeref:typename:bool	access:public	signature:(std::string name)
+WindowMngr::Manage	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Manage()$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:()
+WindowMngr::Start	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Start()$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:()
+WindowMngr::Stop	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Stop()$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:()
+WindowMngr::StopWindow	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void StopWindow(std::string name)$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:(std::string name)
+WindowMngr::TakeHints	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    int TakeHints(int major_ver = 3, int minor_ver = 3, int profile = core, int samples = 4)$/;"	f	class:WindowMngr	typeref:typename:int	access:public	signature:(int major_ver=3,int minor_ver=3,int profile=core,int samples=4)
+WindowMngr::Update	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void Update(std::string name)$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:(std::string name)
+WindowMngr::UseWindow	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    void UseWindow(std::string name)$/;"	f	class:WindowMngr	typeref:typename:void	access:public	signature:(std::string name)
+WindowMngr::comp	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int comp = GLFW_OPENGL_COMPAT_PROFILE;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+WindowMngr::core	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int core = GLFW_OPENGL_CORE_PROFILE;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+WindowMngr::major_ver_hint	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int major_ver_hint = GLFW_CONTEXT_VERSION_MAJOR;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+WindowMngr::minor_ver_hint	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int minor_ver_hint = GLFW_CONTEXT_VERSION_MINOR;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+WindowMngr::prof	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int prof = GLFW_OPENGL_PROFILE;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+WindowMngr::windows	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    std::map<std::string, GLFWwindow*> windows;$/;"	m	class:WindowMngr	typeref:typename:std::map<std::string,GLFWwindow * >	access:public
+World	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float World(float mathVal) { return mathVal * unitSize; }$/;"	f	class:Axis	typeref:typename:float	access:public	signature:(float mathVal)
+X	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	e	enum:Axis::Direction	access:public
+Y	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	e	enum:Axis::Direction	access:public
+Yellow	/devoloping/phyco/src_for_phyco/Colors.hpp	/^    const float Yellow[3]     = {0.90f, 0.75f, 0.20f};$/;"	v	namespace:Colors	typeref:typename:const float[3]
+Z	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    enum Direction { X, Y, Z };$/;"	e	enum:Axis::Direction	access:public
+ZoomCamera	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    void ZoomCamera(float amount)$/;"	f	class:PHFW	typeref:typename:void	access:public	signature:(float amount)
+__anon35855a800102	/devoloping/shit_i_forget/test.cpp	/^    auto assert_shader = [](GLuint sh) {$/;"	f	function:main	file:	signature:(GLuint sh) 
+__anond1975fcb0102	/devoloping/phyco/src_for_phyco/Objects.hpp	/^        auto push_vert = [&](float x, float y, float z, float nx, float ny, float nz) {$/;"	f	function:Prism::Prism	file:	signature:(float x, float y, float z, float nx, float ny, float nz) 
+__anond1975fcb0202	/devoloping/phyco/src_for_phyco/Objects.hpp	/^        {$/;"	f	function:Arrow3D::Build	file:	signature:(float px, float py, float pz, float nx, float ny, float nz) 
+__anond1975fcb0302	/devoloping/phyco/src_for_phyco/Objects.hpp	/^        {$/;"	f	function:Arrow3D::Build	file:	signature:(float cx, float cy, float cz, float radius, float angle, float &outX, float &outY, float &outZ, float &normX, float &normY, float &normZ) 
+__anonfe96b7540102	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, tx, ty, tz, s](float t) {$/;"	f	function:MoveTo	file:	signature:(float t) 
+__anonfe96b7540202	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, dx, dy, dz, s](float t) {$/;"	f	function:MoveBy	file:	signature:(float t) 
+__anonfe96b7540302	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, s](float t) {$/;"	f	function:FadeIn	file:	signature:(float t) 
+__anonfe96b7540402	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, s](float t) {$/;"	f	function:FadeOut	file:	signature:(float t) 
+__anonfe96b7540502	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, targetOp, s](float t) {$/;"	f	function:FadeTo	file:	signature:(float t) 
+__anonfe96b7540602	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, target, s](float t) {$/;"	f	function:ScaleTo	file:	signature:(float t) 
+__anonfe96b7540702	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, tr, tg, tb, s](float t) {$/;"	f	function:ColorTo	file:	signature:(float t) 
+__anonfe96b7540802	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, drx, dry, drz, s](float t) {$/;"	f	function:RotateBy	file:	signature:(float t) 
+__anonfe96b7540902	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, trx, try_, trz, s](float t) {$/;"	f	function:RotateTo	file:	signature:(float t) 
+__anonfe96b7540a02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, s](float t) {$/;"	f	function:FadeOutAndRemove	file:	signature:(float t) 
+__anonfe96b7540b02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.onDone = [&shape]() { shape.opacity = 0.0f; };$/;"	f	function:FadeOutAndRemove	file:	signature:() 
+__anonfe96b7540c02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&shape, s](float t) {$/;"	f	function:ScaleOutAndRemove	file:	signature:(float t) 
+__anonfe96b7540d02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.onDone = [&shape]() { shape.scale = 0.0f; };$/;"	f	function:ScaleOutAndRemove	file:	signature:() 
+__anonfe96b7540e02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, tx, ty, tz, s, segments](float t) {$/;"	f	function:MoveArrow3DStart	file:	signature:(float t) 
+__anonfe96b7540f02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, tx, ty, tz, s, segments](float t) {$/;"	f	function:MoveArrow3DEnd	file:	signature:(float t) 
+__anonfe96b7541002	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, tsx, tsy, tsz, tex, tey, tez, s, segments](float t) {$/;"	f	function:MoveArrow3DBoth	file:	signature:(float t) 
+__anonfe96b7541102	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, s, segments](float t) {$/;"	f	function:GrowArrow3D	file:	signature:(float t) 
+__anonfe96b7541202	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	f	function:ShrinkArrow3D	file:	signature:(float t) 
+__anonfe96b7541302	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	f	function:ShrinkArrow3D	file:	signature:() 
+__anonfe96b7541402	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, s, segments](float t) {$/;"	f	function:ShrinkArrow3DAndRemove	file:	signature:(float t) 
+__anonfe96b7541502	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.onDone = [&arrow]() { arrow.opacity = 0.0f; };$/;"	f	function:ShrinkArrow3DAndRemove	file:	signature:() 
+__anonfe96b7541602	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, tx, ty, s](float t) {$/;"	f	function:MoveArrow2DStart	file:	signature:(float t) 
+__anonfe96b7541702	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, tx, ty, s](float t) {$/;"	f	function:MoveArrow2DEnd	file:	signature:(float t) 
+__anonfe96b7541802	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, tsx, tsy, tex, tey, s](float t) {$/;"	f	function:MoveArrow2DBoth	file:	signature:(float t) 
+__anonfe96b7541902	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, s](float t) {$/;"	f	function:GrowArrow2D	file:	signature:(float t) 
+__anonfe96b7541a02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	f	function:ShrinkArrow2D	file:	signature:(float t) 
+__anonfe96b7541b02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	f	function:ShrinkArrow2D	file:	signature:() 
+__anonfe96b7541c02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.apply = [&arrow, s](float t) {$/;"	f	function:ShrinkArrow2DAndRemove	file:	signature:(float t) 
+__anonfe96b7541d02	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    a.onDone = [&arrow]() { arrow.opacity = 0.0f; };$/;"	f	function:ShrinkArrow2DAndRemove	file:	signature:() 
+a	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+a	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+activeWindow	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::string activeWindow;$/;"	m	class:PHFW	typeref:typename:std::string	access:public
+advance	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    long advance;$/;"	m	struct:CharGlyph	typeref:typename:long	access:public
+apply	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    std::function<void(float)> apply;$/;"	m	struct:Anim	typeref:typename:std::function<void (float)>	access:public
+b	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+b	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+b	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+b	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+b	/devoloping/shit_i_forget/test3.cpp	/^    float r, g, b;    \/\/ Individual color$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+bearingX	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int bearingX, bearingY;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+bearingY	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int bearingX, bearingY;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+bgB	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float bgR = 0.0f, bgG = 0.0f, bgB = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+bgG	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float bgR = 0.0f, bgG = 0.0f, bgB = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+bgR	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float bgR = 0.0f, bgG = 0.0f, bgB = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+brightness	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float brightness = 1.0f;$/;"	m	class:Light	typeref:typename:float	access:public
+cameraDistance	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float cameraDistance = 4.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+cameraFront	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraFront  = glm::vec3(0.0f, 0.0f, -1.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+cameraPitch	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float cameraPitch = 0.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+cameraPos	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraPos    = glm::vec3(0.0f, 1.0f, 4.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+cameraTarget	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+cameraUp	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    glm::vec3 cameraUp     = glm::vec3(0.0f, 1.0f, 0.0f);$/;"	m	class:PHFW	typeref:typename:glm::vec3	access:public
+cameraYaw	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float cameraYaw   = -90.0f;$/;"	m	class:PHFW	typeref:typename:float	access:public
+comp	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int comp = GLFW_OPENGL_COMPAT_PROFILE;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+core	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int core = GLFW_OPENGL_CORE_PROFILE;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+dir	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    Direction dir;$/;"	m	class:Axis	typeref:typename:Direction	access:public
+drawMode	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int drawMode = GL_TRIANGLES; $/;"	m	class:Shape2D	typeref:typename:unsigned int	access:public
+drawMode	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    unsigned int drawMode = GL_TRIANGLES; $/;"	m	class:Shape3D	typeref:typename:unsigned int	access:public
+dt	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    float dt;$/;"	m	class:PHFW	typeref:typename:float	access:public
+duplicant_checker	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^bool duplicant_checker(std::array<double, 2> MnC, poi mnc)$/;"	f	typeref:typename:bool	signature:(std::array<double,2> MnC,poi mnc)
+duration	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    float duration = 1.0f;$/;"	m	struct:Anim	typeref:typename:float	access:public
+dx	/devoloping/shit_i_forget/test3.cpp	/^    float dx, dy;     \/\/ Velocity (Speed and direction)$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+dy	/devoloping/shit_i_forget/test3.cpp	/^    float dx, dy;     \/\/ Velocity (Speed and direction)$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+easing	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    std::function<float(float)> easing = Ease::Smooth;$/;"	m	struct:Anim	typeref:typename:std::function<float (float)>	access:public
+elapsed	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    float elapsed = 0.0f;$/;"	m	struct:Anim	typeref:typename:float	access:public
+end	/devoloping/opengl/falling-ball.cpp	/^  Vec2D end;$/;"	m	class:Arrow	typeref:typename:Vec2D	file:	access:private
+endX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY, endZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+endX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+endY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY, endZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+endY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+endZ	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float endX, endY, endZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+epsilon	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^double epsilon = 1e-10; \/\/ comparison value cuz C++ is really dumb$/;"	v	typeref:typename:double
+eqofline_generator	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^poi eqofline_generator(poi points)$/;"	f	typeref:typename:poi	signature:(poi points)
+ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+ex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+ey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+ez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+ez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+ez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+fill_vertices	/devoloping/shit_i_forget/test.cpp	/^void fill_vertices(const std::vector<Body> &sys, std::vector<Vertex> &out, double scale, float x/;"	f	typeref:typename:void	signature:(const std::vector<Body> & sys,std::vector<Vertex> & out,double scale,float x0,float y0)
+fontSize	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^        int fontSize;$/;"	m	struct:TextMngr::FontData	typeref:typename:int	access:public
+fonts	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    std::map<std::string, FontData> fonts;$/;"	m	class:TextMngr	typeref:typename:std::map<std::string,FontData>	access:public
+fragmentShaderSource	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^const char* fragmentShaderSource = $/;"	v	typeref:typename:const char *
+fragmentShaderSource	/devoloping/shit_i_forget/test3.cpp	/^const char* fragmentShaderSource = $/;"	v	typeref:typename:const char *
+fs	/devoloping/shit_i_forget/test.cpp	/^const char* fs = R"($/;"	v	typeref:typename:const char *
+ft	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    FT_Library ft;$/;"	m	class:TextMngr	typeref:typename:FT_Library	access:public
+ftReady	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    bool ftReady = false;$/;"	m	class:TextMngr	typeref:typename:bool	access:public
+g	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+g	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+g	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+g	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+g	/devoloping/shit_i_forget/test3.cpp	/^    float r, g, b;    \/\/ Individual color$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+glfw_errcb	/devoloping/shit_i_forget/test.cpp	/^void glfw_errcb(int code, const char* msg) {$/;"	f	typeref:typename:void	signature:(int code,const char * msg)
+glyphs	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^        std::map<char, CharGlyph> glyphs;$/;"	m	struct:TextMngr::FontData	typeref:typename:std::map<char,CharGlyph>	access:public
+headLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headLength;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+headLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headLength;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+headRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headRadius;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+headWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float headWidth;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+height	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int width, height;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+indexCount	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    int indexCount; \/\/ The EBO tells us how many total triangles to draw, not glDrawArrays(0, /;"	m	class:Shape3D	typeref:typename:int	access:public
+indices	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    std::vector<unsigned int> indices;$/;"	m	class:Cube	typeref:typename:std::vector<unsigned int>	file:	access:public
+input	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^std::string input()$/;"	f	typeref:typename:std::string	signature:()
+lights	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    std::vector<Light*> lights;$/;"	m	class:PHFW	typeref:typename:std::vector<Light * >	access:public
+main	/devoloping/c++_ref/data_type_conversion.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/if_statmenst.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/input.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/naming_complicated_data.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/printing_in_console(entry_point).cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/some_math_shit.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/switches.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/c++_ref/variables.cpp	/^int main(){$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^int main()$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/done_stuff/Something/something_coming.cpp	/^int main()$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^int main()$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/phyco/testing/comparison.cpp	/^int main()$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/phyco/testing/engine_test.cpp	/^int main()$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/shit_i_forget/test.cpp	/^int main() {$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/shit_i_forget/test2.cpp	/^int main() {$/;"	f	typeref:typename:int	signature:()
+main	/devoloping/shit_i_forget/test3.cpp	/^int main() {$/;"	f	typeref:typename:int	signature:()
+major_ver_hint	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int major_ver_hint = GLFW_CONTEXT_VERSION_MAJOR;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+mass	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+maxVal	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float minVal, maxVal, stepVal;$/;"	m	class:Axis	typeref:typename:float	access:public
+minVal	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float minVal, maxVal, stepVal;$/;"	m	class:Axis	typeref:typename:float	access:public
+minor_ver_hint	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int minor_ver_hint = GLFW_CONTEXT_VERSION_MINOR;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+no_slope	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^double no_slope = std::nan("i can't code infinity :("); \/\/ some empty value$/;"	v	typeref:typename:double
+onDone	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    std::function<void()> onDone = nullptr;$/;"	m	struct:Anim	typeref:typename:std::function<void ()>	access:public
+opacity	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float opacity = 1.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+opacity	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float opacity = 1.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+operator *	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator*(float s) const { return Vec2D(s * x, s * y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(float s) const
+operator +	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator+(const Vec2D &v) const { return Vec2D(x + v.x, y + v.y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(const Vec2D & v) const
+operator -	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator-() const { return Vec2D(-x, -y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:() const
+operator -	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator-(const Vec2D &v) const { return Vec2D(x - v.x, y - v.y); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(const Vec2D & v) const
+operator /	/devoloping/opengl/falling-ball.cpp	/^  Vec2D operator\/(float s) const {$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:(float s) const
+operator <<	/devoloping/opengl/falling-ball.cpp	/^std::ostream &operator<<(std::ostream &os, const Vec2D &v) {$/;"	f	typeref:typename:std::ostream &	signature:(std::ostream & os,const Vec2D & v)
+pairlist_t	/devoloping/c++_ref/naming_complicated_data.cpp	/^typedef std::vector<std::pair<std::string, int>> pairlist_t;$/;"	t	typeref:typename:std::vector<std::pair<std::string,int>>	file:
+perp	/devoloping/opengl/falling-ball.cpp	/^  Vec2D perp() const { return Vec2D(-y, x); }$/;"	f	class:Vec2D	typeref:typename:Vec2D	file:	access:public	signature:() const
+poi	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^typedef std::vector<std::array<double, 2>> poi; \/\/ poi stands for points$/;"	t	typeref:typename:std::vector<std::array<double,2>>	file:
+prof	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    static const int prof = GLFW_OPENGL_PROFILE;$/;"	m	class:WindowMngr	typeref:typename:const int	access:public
+r	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+r	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float r, g, b;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+r	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+r	/devoloping/shit_i_forget/test.cpp	/^    float r, g, b, a;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+r	/devoloping/shit_i_forget/test3.cpp	/^    float r, g, b;    \/\/ Individual color$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+radius	/devoloping/shit_i_forget/test.cpp	/^    float radius;$/;"	m	struct:Body	typeref:typename:float	file:	access:public
+range	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float range = 10.0f;$/;"	m	class:Light	typeref:typename:float	access:public
+rx	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rx = 0.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+rx	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rx = 0.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+ry	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float ry = 0.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+ry	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float ry = 0.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+rz	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rz = 0.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+rz	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float rz = 0.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+s	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float s;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+sb	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:float	access:public
+scale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float scale = 1.0f;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+scale	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float scale = 1.0f;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+setup_system	/devoloping/shit_i_forget/test.cpp	/^void setup_system(std::vector<Body> &system, int num_asteroids) {$/;"	f	typeref:typename:void	signature:(std::vector<Body> & system,int num_asteroids)
+sex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+sex	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+sey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+sey	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+sez	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+sg	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:float	access:public
+shaderName	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::string shaderName = "DefaultShader";$/;"	m	class:Shape3D	typeref:typename:std::string	access:public
+shaderName	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::string shaderName = "DefaultShader2D";$/;"	m	class:Shape2D	typeref:typename:std::string	access:public
+shaders	/devoloping/phyco/src_for_phyco/ShaderManager.hpp	/^    std::map<std::string, unsigned int> shaders;$/;"	m	class:ShaderMngr	typeref:typename:std::map<std::string,unsigned int>	access:public
+shaftRadius	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float shaftRadius;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+showNegativeTip	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    bool showNegativeTip;$/;"	m	class:Axis	typeref:typename:bool	access:public
+showPositiveTip	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    bool showPositiveTip;$/;"	m	class:Axis	typeref:typename:bool	access:public
+size	/devoloping/shit_i_forget/test.cpp	/^    float size;$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+sizeLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float sizeLength;$/;"	m	class:Triangle	typeref:typename:float	access:public
+sr	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:float	access:public
+srx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:float	access:public
+srx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:float	access:public
+sry	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:float	access:public
+sry	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:float	access:public
+srz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:float	access:public
+srz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:float	access:public
+ssx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+ssx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+ssy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:float	access:public
+ssy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+ssz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:float	access:public
+start	/devoloping/opengl/falling-ball.cpp	/^  Vec2D start;$/;"	m	class:Arrow	typeref:typename:Vec2D	file:	access:private
+startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeIn::State	typeref:typename:float	access:public
+startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOut::State	typeref:typename:float	access:public
+startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOutAndRemove::State	typeref:typename:float	access:public
+startOp	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeTo::State	typeref:typename:float	access:public
+startScale	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleOutAndRemove::State	typeref:typename:float	access:public
+startScale	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleTo::State	typeref:typename:float	access:public
+startX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY, startZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+startX	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+startY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY, startZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+startY	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+startZ	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float startX, startY, startZ;$/;"	m	class:Arrow3D	typeref:typename:float	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sr, sg, sb; bool started = false; };$/;"	m	struct:ColorTo::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateBy::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float srx, sry, srz; bool started = false; };$/;"	m	struct:RotateTo::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, sex, sey; bool started = false; };$/;"	m	struct:MoveArrow2DBoth::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ssx, ssy, ssz, sex, sey, sez; bool started = false; };$/;"	m	struct:MoveArrow3DBoth::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeIn::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOut::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeOutAndRemove::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startOp; bool started = false; };$/;"	m	struct:FadeTo::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleOutAndRemove::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float startScale; bool started = false; };$/;"	m	struct:ScaleTo::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DEnd::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DStart::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:bool	access:public
+started	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:bool	access:public
+stepVal	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float minVal, maxVal, stepVal;$/;"	m	class:Axis	typeref:typename:float	access:public
+step_system	/devoloping/shit_i_forget/test.cpp	/^void step_system(std::vector<Body> &sys, double G, double dt, double softening, int steps_per_fr/;"	f	typeref:typename:void	signature:(std::vector<Body> & sys,double G,double dt,double softening,int steps_per_frame)
+str	/devoloping/c++_ref/naming_complicated_data.cpp	/^typedef std::string str;$/;"	t	typeref:typename:std::string	file:
+strokeWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float strokeWidth;$/;"	m	class:Arrow2D	typeref:typename:float	access:public
+strokeWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float strokeWidth;$/;"	m	class:Axis	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DEnd::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DStart::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+sx	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:GrowArrow2D::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, sx, sy; bool started = false; };$/;"	m	struct:ShrinkArrow2DAndRemove::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DEnd::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy; bool started = false; };$/;"	m	struct:MoveArrow2DStart::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow2D(Arrow2D& arrow, float dur) { Anim a; a.duration = dur; struct State { /;"	m	struct:ShrinkArrow2D::State	typeref:typename:float	access:public
+sy	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:GrowArrow3D::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float ex, ey, ez, sx, sy, sz; bool started = false; };$/;"	m	struct:ShrinkArrow3DAndRemove::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DEnd::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveArrow3DStart::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveBy::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^    struct State { float sx, sy, sz; bool started = false; };$/;"	m	struct:MoveTo::State	typeref:typename:float	access:public
+sz	/devoloping/phyco/src_for_phyco/Animations.hpp	/^inline Anim ShrinkArrow3D(Arrow3D& arrow, float dur, int segments = 32) { Anim a; a.duration = d/;"	m	struct:ShrinkArrow3D::State	typeref:typename:float	access:public
+textVAO	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    unsigned int textVAO = 0, textVBO = 0;$/;"	m	class:TextMngr	typeref:typename:unsigned int	access:public
+textVBO	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    unsigned int textVAO = 0, textVBO = 0;$/;"	m	class:TextMngr	typeref:typename:unsigned int	access:public
+textureID	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    unsigned int textureID;$/;"	m	struct:CharGlyph	typeref:typename:unsigned int	access:public
+tickSize	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float tickSize;$/;"	m	class:Axis	typeref:typename:float	access:public
+tipLength	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float tipLength;$/;"	m	class:Axis	typeref:typename:float	access:public
+tipWidth	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float tipWidth;$/;"	m	class:Axis	typeref:typename:float	access:public
+unitSize	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float unitSize;$/;"	m	class:Axis	typeref:typename:float	access:public
+unitVec	/devoloping/opengl/falling-ball.cpp	/^  Vec2D unitVec = Normalized(end - start);$/;"	m	class:Arrow	typeref:typename:Vec2D	file:	access:private
+updaters	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::vector<std::function<void(float)>> updaters;$/;"	m	class:Shape2D	typeref:typename:std::vector<std::function<void (float)>>	access:public
+updaters	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    std::vector<std::function<void(float)>> updaters;$/;"	m	class:Shape3D	typeref:typename:std::vector<std::function<void (float)>>	access:public
+validator	/devoloping/done_stuff/How Many Points On Line/how_many_p_on_l.cpp	/^std::vector<int> validator(poi points, poi MnC)$/;"	f	typeref:typename:std::vector<int>	signature:(poi points,poi MnC)
+vaoReady	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    bool vaoReady = false;$/;"	m	class:TextMngr	typeref:typename:bool	access:public
+vertexShaderSource	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^const char* vertexShaderSource = $/;"	v	typeref:typename:const char *
+vertexShaderSource	/devoloping/shit_i_forget/test3.cpp	/^const char* vertexShaderSource = $/;"	v	typeref:typename:const char *
+vertexcount	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    int vertexcount;$/;"	m	class:Shape2D	typeref:typename:int	access:public
+vertices	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    std::vector<float> vertices;$/;"	m	class:Cube	typeref:typename:std::vector<float>	file:	access:public
+vertices	/devoloping/opengl/falling-ball.cpp	/^  float vertices[];$/;"	m	class:Arrow	typeref:typename:float[]	file:	access:private
+vs	/devoloping/shit_i_forget/test.cpp	/^const char* vs = R"($/;"	v	typeref:typename:const char *
+vx	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+vy	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+width	/devoloping/phyco/src_for_phyco/TextManager.hpp	/^    int width, height;$/;"	m	struct:CharGlyph	typeref:typename:int	access:public
+winHeight	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    int winWidth, winHeight;$/;"	m	class:PHFW	typeref:typename:int	access:public
+winWidth	/devoloping/phyco/src_for_phyco/Phyco.hpp	/^    int winWidth, winHeight;$/;"	m	class:PHFW	typeref:typename:int	access:public
+windows	/devoloping/phyco/src_for_phyco/WindowManager.hpp	/^    std::map<std::string, GLFWwindow*> windows;$/;"	m	class:WindowMngr	typeref:typename:std::map<std::string,GLFWwindow * >	access:public
+x	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float x, y, z;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+x	/devoloping/opengl/falling-ball.cpp	/^  float x;$/;"	m	class:Vec2D	typeref:typename:float	file:	access:public
+x	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+x	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+x	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+x	/devoloping/shit_i_forget/test.cpp	/^    float x, y;    \/\/ NDC\/normalized device coordinate pixels$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+x	/devoloping/shit_i_forget/test3.cpp	/^    float x, y;       \/\/ Current position$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+y	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float x, y, z;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+y	/devoloping/opengl/falling-ball.cpp	/^  float y;$/;"	m	class:Vec2D	typeref:typename:float	file:	access:public
+y	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+y	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape3D	typeref:typename:float	access:public
+y	/devoloping/shit_i_forget/test.cpp	/^    double x, y, vx, vy, mass;$/;"	m	struct:Body	typeref:typename:double	file:	access:public
+y	/devoloping/shit_i_forget/test.cpp	/^    float x, y;    \/\/ NDC\/normalized device coordinate pixels$/;"	m	struct:Vertex	typeref:typename:float	file:	access:public
+y	/devoloping/shit_i_forget/test3.cpp	/^    float x, y;       \/\/ Current position$/;"	m	struct:Asteroid	typeref:typename:float	file:	access:public
+z	/devoloping/done_stuff/SomethingElse/SomethingElse.cpp	/^    float x, y, z;$/;"	m	class:Cube	typeref:typename:float	file:	access:public
+z	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape2D	typeref:typename:float	access:public
+z	/devoloping/phyco/src_for_phyco/Objects.hpp	/^    float x, y, z;$/;"	m	class:Shape3D	typeref:typename:float	access:public

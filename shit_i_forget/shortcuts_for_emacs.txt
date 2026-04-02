@@ -1,0 +1,54 @@
+muscle memory takes time to build, especially when you just remapped your brain alongside your keyboard. 
+
+Here is the complete cheat sheet for the exact, lightweight configuration we just built for you. 
+
+### 🧭 Navigation & Search (Ivy/Counsel)
+These are your bread and butter for moving around your tablet's file system and searching through code.
+| Shortcut | Command | What it does |
+| :--- | :--- | :--- |
+| **`M-x`** | `counsel-M-x` | Open the master command palette (replaces standard `M-x`). |
+| **`C-x C-f`** | `counsel-find-file` | Open or create a file with fuzzy search. |
+| **`C-x b`** | `counsel-switch-buffer` | Switch between currently open files. |
+| **`C-x f`** | `counsel-ibuffer` | Open the advanced list of all active buffers. |
+| **`C-s`** | `swiper` | Search for text *inside* your current file. |
+
+### ✍️ Core Editing & Movement
+The custom home-row bindings we added to keep your hands from leaving the keyboard.
+| Shortcut | Command | What it does |
+| :--- | :--- | :--- |
+| **`C-;`** | `kill-ring-save` | **Copy** the selected text. |
+| **`C-y`** | `yank` | **Paste** the copied text *(Default Emacs)*. |
+| **`C-z`** | `undo` | **Undo** your last action. |
+| **`C-.`** | `forward-word` | Jump forward one word. |
+| **`C-,`** | `backward-word` | Jump backward one word. |
+| **`M-<up>`** | `move-text-up` | Move the current line (or selection) **Up**. |
+| **`M-<down>`** | `move-text-down` | Move the current line (or selection) **Down**. |
+
+### 🎯 Multiple Cursors & Mass Editing
+For when you need to rename an OpenGL variable in 15 different places at once.
+| Shortcut | Command | What it does |
+| :--- | :--- | :--- |
+| **`C-c ;`** | `iedit-mode` | Highlight a word, press this, and edit all matches simultaneously. |
+| **`C-S-<down>`** | `mc/mark-next...` | Add a cursor to the *next* match of your current word. |
+| **`C-S-<up>`** | `mc/mark-prev...` | Add a cursor to the *previous* match of your current word. |
+| **`C-c m a`** | `mc/mark-all...` | Add a cursor to *every* match in the entire file. |
+| **`C-c m e`** | `mc/edit-lines` | Add a cursor to the beginning of every highlighted line. |
+
+### 🛠️ Compilation & Project Management
+Your shortcuts for compiling Phyco 1.0 using your custom `g++` command.
+| Shortcut | Command | What it does |
+| :--- | :--- | :--- |
+| **`<f5>`** | `compile` | Run your custom `g++ -lGL -lglfw` build command. |
+| **`C-c p c`** | `project-compile` | Compile the entire project. |
+| **`C-c p f`** | `project-find-file` | Search for a file anywhere in your project folder. |
+| **`C-c p s`** | `project-shell` | Open a Bash terminal right inside Emacs. |
+
+### 👁️ Visual Toggles
+| Shortcut | Command | What it does |
+| :--- | :--- | :--- |
+| **`C-c w`** | `whitespace-mode` | Toggle the visibility of spaces (dots) and tabs (lines). |
+
+### 🚨 The Panic Buttons
+If you ever press the wrong thing, get stuck in a menu, or forget what you are doing, these are your lifelines.
+* **`C-g`** : The Emacs "Cancel" button. Mash this to abort whatever command is currently running and get your normal cursor back.
+* **Just wait half a second** : Because you have `which-key` installed, if you press `C-x` or `C-c` and forget the next button, literally just stop typing. A menu will pop up at the bottom of the screen showing you every possible key you can press next.
