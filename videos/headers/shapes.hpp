@@ -16,7 +16,7 @@
 const float PI = 3.14159265359f;
 
 
-std::vector<float> GenerateSphereVertices(float radius, int sectors, int stacks, std::array<float, 4> color = {1.0f, 0.0f, 0.0f, 0.0f}) {
+std::vector<float> GenerateSphereVertices(float radius = 0.5f, int sectors= 20, int stacks = 15, std::array<float, 4> color = {1.0f, 0.0f, 0.0f, 0.0f}) {
     std::vector<float> vertices;
 
     float sectorStep = 2 * PI / sectors;
@@ -60,7 +60,7 @@ std::vector<float> GenerateSphereVertices(float radius, int sectors, int stacks,
 }
 
 
-std::vector<unsigned int> GenerateSphereIndices(int sectors, int stacks) {
+std::vector<unsigned int> GenerateSphereIndices(int sectors = 20, int stacks = 15) {
     std::vector<unsigned int> indices;
 
     for (int i = 0; i < stacks; ++i) {
@@ -90,7 +90,7 @@ std::vector<unsigned int> GenerateSphereIndices(int sectors, int stacks) {
 
 // resX and resZ control how many grid squares make up the plane.
 // For a simple flat floor, resX=1 and resZ=1 is enough (just 4 vertices).
-std::vector<float> GeneratePlaneVertices(float width, float depth, int resX, int resZ, std::array<float, 4> color = {1.0f, 0.0f, 0.0f, 0.0f}) {
+std::vector<float> GeneratePlaneVertices(float width = 1, float depth = 1, int resX = 20, int resZ = 20, std::array<float, 4> color = {1.0f, 1.0f, 0.0f, 0.0f}) {
     std::vector<float> vertices;
 
     for (int z = 0; z <= resZ; ++z) {
@@ -129,7 +129,7 @@ std::vector<float> GeneratePlaneVertices(float width, float depth, int resX, int
     return vertices;
 }
 
-std::vector<unsigned int> GeneratePlaneIndices(int resX, int resZ) {
+std::vector<unsigned int> GeneratePlaneIndices(int resX = 20, int resZ = 20) {
     std::vector<unsigned int> indices;
 
     for (int z = 0; z < resZ; ++z) {

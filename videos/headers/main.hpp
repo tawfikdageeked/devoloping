@@ -1,4 +1,4 @@
-a#pragma once
+#pragma once
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -6,6 +6,7 @@ a#pragma once
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <EGL/egl.h>
 #include <cmath>
 #include <vector>
 #include <string>
@@ -59,6 +60,48 @@ int InitializeGLEW()
     }
     
     return 0;
+}
+
+bool InitializeHeadlessRendering(int width, int height)
+{
+    // 1. Connect directly to the default GPU display driver
+    EGLDisplay eglDpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
+    EGLint major, minor;
+    if (!eglInitialize(eglDpy, &major, &minor)) {
+        std::cout << "Failed to initialize EGL" << std::endl;
+        return false;
+    }
+
+    // 2. Tell the GPU what kind of invisible canvas we need (RGB + Depth)
+    EGLint configAttribs[] = {
+        EGL_SURFACE_TYPE, EGL_PBUFFER_BIT,
+        EGL_BLUE_SIZE, 8,
+        EGL_GREEN_SIZE, 8,
+        EGL_RED_SIZE, 8,
+        EGL_DEPTH_SIZE, 24,
+        EGL_RENDERABLE_TYPE, EGL_OPENGL_BIT,
+        EGL_NONE
+    };
+    EGLint numConfigs;
+    EGLConfig eglCfg;
+    eglChooseConfig(eglDpy, configAttribs, &eglCfg, 1, &numConfigs);
+
+    // 3. Create the invisible PBuffer surface (our "Window" in VRAM)
+    EGLint pbufferAttribs[] = {
+        EGL_WIDTH, width,
+        EGL_HEIGHT, height,
+        EGL_NONE,
+    };
+    EGLSurface eglSurf = eglCreatePbufferSurface(eglDpy, eglCfg, pbufferAttribs);
+
+    // 4. Bind the OpenGL API and create the Context
+    eglBindAPI(EGL_OPENGL_API);
+    EGLContext eglCtx = eglCreateContext(eglDpy, eglCfg, EGL_NO_CONTEXT, NULL);
+
+    // 5. Make it current! The GPU is now listening to our commands.
+    eglMakeCurrent(eglDpy, eglSurf, eglSurf, eglCtx);
+
+    return true;
 }
 
 // opengl give everything an int to make is to use stuff
