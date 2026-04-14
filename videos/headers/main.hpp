@@ -62,17 +62,35 @@ int InitializeGLEW()
     return 0;
 }
 
-bool InitializeHeadlessRendering(int width, int height)
+bool InitializeHeadlessRendering(int width, int height) 
 {
-    // 1. Connect directly to the default GPU display driver
+    // 1. HIJACK THE LINUX ENVIRONMENT (Force deep logging and explicit vendor paths)
+    // The '1' means overwrite existing variables if they exist.
+    setenv("EGL_LOG_LEVEL", "debug", 1);
+    setenv("LIBGL_DEBUG", "verbose", 1); 
+    setenv("__EGL_VENDOR_LIBRARY_FILENAMES", "/usr/share/glvnd/egl_vendor.d/10_nvidia.json", 1);
+
+    std::cout << "--- Booting EGL ---" << std::endl;
+
+    // 2. Connect directly to the default GPU display driver
     EGLDisplay eglDpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
-    EGLint major, minor;
-    if (!eglInitialize(eglDpy, &major, &minor)) {
-        std::cout << "Failed to initialize EGL" << std::endl;
+    if (eglDpy == EGL_NO_DISPLAY) {
+        std::cout << "[FATAL] eglGetDisplay failed!" << std::endl;
+        std::cout << "Reason: " << GetEGLErrorString(eglGetError()) << std::endl;
         return false;
     }
 
-    // 2. Tell the GPU what kind of invisible canvas we need (RGB + Depth)
+    // 3. Initialize EGL
+    EGLint major, minor;
+    if (!eglInitialize(eglDpy, &major, &minor)) {
+        std::cout << "[FATAL] eglInitialize failed!" << std::endl;
+        std::cout << "Reason: " << GetEGLErrorString(eglGetError()) << std::endl;
+        return false;
+    }
+    
+    std::cout << "EGL Initialized Successfully! Version: " << major << "." << minor << std::endl;
+
+    // 4. Configure the invisible canvas
     EGLint configAttribs[] = {
         EGL_SURFACE_TYPE, EGL_PBUFFER_BIT,
         EGL_BLUE_SIZE, 8,
@@ -82,24 +100,43 @@ bool InitializeHeadlessRendering(int width, int height)
         EGL_RENDERABLE_TYPE, EGL_OPENGL_BIT,
         EGL_NONE
     };
+    
     EGLint numConfigs;
     EGLConfig eglCfg;
-    eglChooseConfig(eglDpy, configAttribs, &eglCfg, 1, &numConfigs);
+    if (!eglChooseConfig(eglDpy, configAttribs, &eglCfg, 1, &numConfigs)) {
+        std::cout << "[FATAL] eglChooseConfig failed!" << std::endl;
+        std::cout << "Reason: " << GetEGLErrorString(eglGetError()) << std::endl;
+        return false;
+    }
 
-    // 3. Create the invisible PBuffer surface (our "Window" in VRAM)
+    // 5. Create PBuffer
     EGLint pbufferAttribs[] = {
         EGL_WIDTH, width,
         EGL_HEIGHT, height,
         EGL_NONE,
     };
     EGLSurface eglSurf = eglCreatePbufferSurface(eglDpy, eglCfg, pbufferAttribs);
+    if (eglSurf == EGL_NO_SURFACE) {
+        std::cout << "[FATAL] eglCreatePbufferSurface failed!" << std::endl;
+        std::cout << "Reason: " << GetEGLErrorString(eglGetError()) << std::endl;
+        return false;
+    }
 
-    // 4. Bind the OpenGL API and create the Context
+    // 6. Bind API & Create Context
     eglBindAPI(EGL_OPENGL_API);
     EGLContext eglCtx = eglCreateContext(eglDpy, eglCfg, EGL_NO_CONTEXT, NULL);
+    if (eglCtx == EGL_NO_CONTEXT) {
+        std::cout << "[FATAL] eglCreateContext failed!" << std::endl;
+        std::cout << "Reason: " << GetEGLErrorString(eglGetError()) << std::endl;
+        return false;
+    }
 
-    // 5. Make it current! The GPU is now listening to our commands.
-    eglMakeCurrent(eglDpy, eglSurf, eglSurf, eglCtx);
+    // 7. Make it Current
+    if (!eglMakeCurrent(eglDpy, eglSurf, eglSurf, eglCtx)) {
+        std::cout << "[FATAL] eglMakeCurrent failed!" << std::endl;
+        std::cout << "Reason: " << GetEGLErrorString(eglGetError()) << std::endl;
+        return false;
+    }
 
     return true;
 }
